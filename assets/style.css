@@ -526,10 +526,4 @@ p { margin: 0; }
   .note { position: static; animation: none; align-self: stretch; }
   .hub__caption { position: static; align-self: flex-end; }
   .footer__top { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 48px 32px; }
-  .footer__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
-  main { animation: none; }
-  .tile::before { transition: none; }
-}
+  .footer__cols { grid-template-columns: repeat(2, minmax(0, 1fr
