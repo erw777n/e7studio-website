@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>E7 Studio</title>
+<meta name="description" content="Kanalo von E7 Studio verbindet deinen Shopify-Shop mit Marktplätzen wie Kaufland, OTTO und eBay. Bestand, Bestellungen und Versand gleichen sich automatisch ab.">
+<meta name="theme-color" content="#050E1C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<!--FONTS-->
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="e7Seven" gradientUnits="userSpaceOnUse" x1="0" y1="70" x2="0" y2="330"><stop offset="0" stop-color="#2E98EE"/><stop offset="1" stop-color="#1076D4"/></linearGradient>
+    <linearGradient id="kBase" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#171A3A"/><stop offset="1" stop-color="#05060C"/></linearGradient>
+    <radialGradient id="kViolet" cx="0.24" cy="0.26" r="0.58"><stop offset="0" stop-color="#6D5DFC" stop-opacity="0.6"/><stop offset="1" stop-color="#6D5DFC" stop-opacity="0"/></radialGradient>
+    <radialGradient id="kCyan" cx="0.82" cy="0.82" r="0.58"><stop offset="0" stop-color="#06B6D4" stop-opacity="0.5"/><stop offset="1" stop-color="#06B6D4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="kNode"><stop offset="0" stop-color="#7DD3FC" stop-opacity="0.5"/><stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/></radialGradient>
+    <linearGradient id="kTop" gradientUnits="userSpaceOnUse" x1="270" y1="0" x2="650" y2="0"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <linearGradient id="kMid" gradientUnits="userSpaceOnUse" x1="270" y1="0" x2="650" y2="0"><stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <linearGradient id="kBot" gradientUnits="userSpaceOnUse" x1="270" y1="0" x2="650" y2="0"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <filter id="kGlow" x="-30%" y="-50%" width="160%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="12" result="near"/><feGaussianBlur in="SourceGraphic" stdDeviation="40" result="far"/><feColorMatrix in="far" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.55 0" result="farSoft"/><feMerge><feMergeNode in="farSoft"/><feMergeNode in="near"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <symbol id="e7Light" viewBox="60 70 531.4 260"><path d="M60 70 H300 L266.1 130 H120 V170 H250 V230 H120 V270 H280 V330 H60 Z" fill="#FFFFFF"/><path d="M332 70 H591.4 L444.5 330 H375.5 L488.6 130 H298.1 Z" fill="url(#e7Seven)"/></symbol>
+    <symbol id="kanalo" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="url(#kBase)"/><rect width="1200" height="1200" fill="url(#kViolet)"/><rect width="1200" height="1200" fill="url(#kCyan)"/><g transform="translate(-10 0)"><circle cx="860" cy="600" r="300" fill="url(#kNode)"/><g filter="url(#kGlow)" fill="none" stroke-linecap="round"><path d="M300 430 C485 430 515 600 650 600" stroke="url(#kTop)" stroke-width="72"/><path d="M300 770 C485 770 515 600 650 600" stroke="url(#kBot)" stroke-width="72"/><path d="M300 600 H748" stroke="url(#kMid)" stroke-width="72"/><circle cx="860" cy="600" r="84" stroke="#FFFFFF" stroke-width="66"/></g></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4.5 8h15l-1.3 12H5.8L4.5 8z M8.5 8a3.5 3.5 0 017 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0114-3l2 2 M20 4v4h-4 M20 15a8 8 0 01-14 3l-2-2 M4 20v-4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2z M13 10h4l3 3v3h-7 M6 19a2 2 0 100-4 2 2 0 000 4z M17 19a2 2 0 100-4 2 2 0 000 4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shopify" viewBox="0 0 24 24"><path d="M4 7h16l-1.5 13h-13L4 7z M9 7a3 3 0 016 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z M8 9.5h8 M8 12.5h5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
+        <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
+        <span>Studio</span>
+      </a>
+      <div class="nav__links">
+        <a href="#vorteile">Vorteile</a>
+        <a href="#so-gehts">So geht’s</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--primary btn--sm" href="#pilot">Pilot werden</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <span class="badge"><b>Neu</b>Kanalo · Pilotphase startet</span>
+        <h1 id="hero-title">Verkaufe überall. <span class="grad">Steuere alles</span> aus Shopify.</h1>
+        <p class="hero__lead">Kanalo verbindet deinen Shopify-Shop mit Marktplätzen wie Kaufland, OTTO und eBay. Bestand, Bestellungen und Versand gleichen sich automatisch ab. Du erreichst mehr Kunden und behältst trotzdem den Überblick.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#pilot">Pilot-Händler werden <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="#vorteile">Was Kanalo kann</a>
+        </div>
+        <div class="hero__trust">
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Läuft direkt im Shopify-Admin</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Keine doppelte Pflege</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Support auf Deutsch</span>
+        </div>
+      </div>
+
+      <div class="hub">
+        <svg class="hub__svg" viewBox="0 0 600 440" role="img" aria-label="Dein Shopify-Shop ist über Kanalo mit Kaufland, OTTO, eBay und Amazon verbunden">
+          <defs>
+            <radialGradient id="hubGlow"><stop offset="0" stop-color="#1483E3" stop-opacity="0.55"/><stop offset="1" stop-color="#1483E3" stop-opacity="0"/></radialGradient>
+            <clipPath id="hubClip"><rect x="256" y="176" width="88" height="88" rx="22"/></clipPath>
+          </defs>
+          <circle cx="300" cy="220" r="140" fill="url(#hubGlow)"/>
+          <g fill="none" stroke="rgba(148,184,222,0.26)" stroke-width="2">
+            <path d="M166 220 H256"/>
+            <path d="M344 220 C394 220 384 64 432 64"/>
+            <path d="M344 220 C394 220 384 168 432 168"/>
+            <path d="M344 220 C394 220 384 272 432 272"/>
+            <path d="M344 220 C394 220 384 376 432 376"/>
+          </g>
+          <g fill="none" stroke="#4FA9F3" stroke-width="3" stroke-linecap="round">
+            <path class="flow" d="M166 220 H256"/>
+            <path class="flow" d="M344 220 C394 220 384 64 432 64"/>
+            <path class="flow flow--rev" d="M344 220 C394 220 384 168 432 168"/>
+            <path class="flow" d="M344 220 C394 220 384 272 432 272"/>
+            <path class="flow flow--rev" d="M344 220 C394 220 384 376 432 376"/>
+          </g>
+
+          <rect x="6" y="178" width="160" height="84" rx="20" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+          <rect x="22" y="198" width="44" height="44" rx="12" fill="rgba(52,211,153,0.14)"/>
+          <svg x="31" y="207" width="26" height="26" viewBox="0 0 24 24" color="#34D399"><use href="#i-bag"/></svg>
+          <text x="78" y="216" fill="#F2F7FD" font-size="15" font-weight="700">Dein Shop</text>
+          <text x="78" y="237" fill="#8EA4BC" font-size="12.5">auf Shopify</text>
+
+          <rect x="249" y="169" width="102" height="102" rx="28" fill="none" stroke="rgba(166,213,251,0.4)"/>
+          <g clip-path="url(#hubClip)"><svg x="256" y="176" width="88" height="88" viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></g>
+          <text x="300" y="298" text-anchor="middle" fill="#C5D5E6" font-size="13" font-weight="700">Kanalo</text>
+
+          <g font-size="15" font-weight="700" fill="#F2F7FD">
+            <rect x="432" y="40" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="456" cy="64" r="5" fill="#34D399"/><text x="472" y="69">Kaufland</text>
+            <rect x="432" y="144" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="456" cy="168" r="5" fill="#4FA9F3"/><text x="472" y="173">OTTO</text>
+            <rect x="432" y="248" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="456" cy="272" r="5" fill="#4FA9F3"/><text x="472" y="277">eBay</text>
+            <rect x="432" y="352" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="456" cy="376" r="5" fill="#4FA9F3"/><text x="472" y="381">Amazon</text>
+          </g>
+          <g fill="none" stroke="#8EA4BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M562 60 h14 l-4 -4 M576 68 h-14 l4 4"/>
+            <path d="M562 164 h14 l-4 -4 M576 172 h-14 l4 4"/>
+            <path d="M562 268 h14 l-4 -4 M576 276 h-14 l4 4"/>
+            <path d="M562 372 h14 l-4 -4 M576 380 h-14 l4 4"/>
+          </g>
+        </svg>
+
+        <div class="note note--order" aria-hidden="true">
+          <span class="note__icon"><svg><use href="#i-bag"/></svg></span>
+          <span><b>Neue Bestellung</b><small>über Kaufland · 49,90 €</small></span>
+        </div>
+        <div class="note note--stock" aria-hidden="true">
+          <span class="note__icon"><svg><use href="#i-sync"/></svg></span>
+          <span><b>Bestand aktualisiert</b><small>auf allen Marktplätzen</small></span>
+        </div>
+        <span class="hub__caption">Beispielansicht</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="markets" aria-label="Marktplätze">
+    <div class="wrap markets__row">
+      <p class="markets__label">Kanalo verbindet deinen Shop mit den großen Marktplätzen in Deutschland:</p>
+      <div class="markets__list">
+        <span class="mkt mkt--first">Kaufland <small>zuerst</small></span>
+        <span class="mkt">OTTO <small>geplant</small></span>
+        <span class="mkt">eBay <small>geplant</small></span>
+        <span class="mkt">Amazon <small>geplant</small></span>
+        <span class="mkt mkt--more">und mehr</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="vorteile" aria-labelledby="benefits-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="eyebrow">Warum Kanalo</span>
+        <h2 id="benefits-title">Mehr Verkäufe. <span class="grad">Weniger Aufwand.</span></h2>
+        <p>Marktplätze bringen dir Kunden, die deinen Shop noch nicht kennen. Kanalo erledigt die Arbeit dahinter, damit du nichts doppelt machen musst.</p>
+      </div>
+
+      <div class="bento">
+        <article class="tile tile--wide tile--glow">
+          <div class="tile__text">
+            <h3>Neue Kunden auf jedem Marktplatz</h3>
+            <p>Auf großen Marktplätzen suchen täglich viele Käufer nach Produkten wie deinen. Mit Kanalo bist du dort präsent, ohne einen zweiten Shop pflegen zu müssen.</p>
+          </div>
+          <div class="tile__visual bars" aria-label="Beispiel: Bestellungen pro Woche nach Verkaufskanal">
+            <div class="bars__head"><b>Bestellungen diese Woche</b><span class="ex">Beispiel</span></div>
+            <div class="bar"><span>Shopify</span><span class="bar__track"><span class="bar__fill" style="width: 90%"></span></span><span>18</span></div>
+            <div class="bar"><span>Kaufland</span><span class="bar__track"><span class="bar__fill bar__fill--b" style="width: 55%"></span></span><span>11</span></div>
+            <div class="bar"><span>OTTO</span><span class="bar__track"><span class="bar__fill bar__fill--c" style="width: 35%"></span></span><span>7</span></div>
+            <div class="bars__foot"><span>Zusätzlich über Marktplätze</span><strong>+18 Bestellungen</strong></div>
+          </div>
+        </article>
+
+        <article class="tile tile--third">
+          <div class="tile__text">
+            <h3>Nie mehr überverkauft</h3>
+            <p>Verkaufst du ein Produkt irgendwo, wird der Bestand überall automatisch angepasst.</p>
+          </div>
+          <div class="tile__visual stock">
+            <div class="stock__item"><div><b>Leinenhemd, Größe M</b><small>Bestand</small></div><span class="stock__num">3</span></div>
+            <div class="stock__chans">
+              <span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>Shopify</span>
+              <span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>Kaufland</span>
+              <span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>OTTO</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile tile--third">
+          <div class="tile__text">
+            <h3>Alle Bestellungen in Shopify</h3>
+            <p>Bestellungen von jedem Marktplatz landen in deinem Shopify-Admin. Ein Ort, ein Ablauf.</p>
+          </div>
+          <div class="tile__visual orders">
+            <div class="order"><b><span class="src src--k">Kaufland</span>#1042</b><em>49,90 €</em></div>
+            <div class="order"><b><span class="src src--s">Shopify</span>#1043</b><em>24,00 €</em></div>
+            <div class="order"><b><span class="src src--o">OTTO</span>#1044</b><em>89,00 €</em></div>
+          </div>
+        </article>
+
+        <article class="tile tile--third">
+          <div class="tile__text">
+            <h3>Versand meldet sich selbst</h3>
+            <p>Trag die Sendungsnummer wie gewohnt in Shopify ein. Kanalo gibt sie an den Marktplatz weiter.</p>
+          </div>
+          <div class="tile__visual ship">
+            <span class="ship__icon"><svg aria-hidden="true"><use href="#i-truck"/></svg></span>
+            <div><b>Bestellung #1042 versendet</b><small><svg aria-hidden="true"><use href="#i-check"/></svg>An Kaufland gemeldet</small></div>
+          </div>
+        </article>
+
+        <article class="tile tile--third">
+          <div class="tile__text">
+            <h3>In Minuten eingerichtet</h3>
+            <p>Ohne Tabellen und ohne Import. Deine Produkte werden automatisch zugeordnet.</p>
+          </div>
+          <ul class="tile__visual setup">
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>App installiert</li>
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Marktplatz verbunden</li>
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Produkte zugeordnet</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="so-gehts" aria-labelledby="steps-title" style="padding-top: 0">
+    <div class="wrap">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">So geht’s</span>
+        <h2 id="steps-title">In drei Schritten startklar.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step"><h3>App installieren</h3><p>Kanalo aus dem Shopify App Store hinzufügen. Die App öffnet sich direkt in deinem Shopify-Admin.</p></li>
+        <li class="step"><h3>Marktplatz verbinden</h3><p>Zugangsdaten deines Händlerkontos eintragen. Sie werden verschlüsselt gespeichert.</p></li>
+        <li class="step"><h3>Verkaufen</h3><p>Kanalo ordnet deine Produkte zu und hält Bestand, Bestellungen und Versand ab jetzt synchron.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="pilot" aria-labelledby="pilot-title" style="padding-top: 0">
+    <div class="wrap">
+      <div class="pilot__card">
+        <div>
+          <span class="eyebrow">Pilotphase</span>
+          <h2 id="pilot-title">Sei einer der ersten Händler mit Kanalo.</h2>
+          <p>Wir suchen Shopify-Händler, die auf Marktplätzen verkaufen oder damit starten wollen. Du testest Kanalo vor dem offiziellen Start und bestimmst mit, was die App kann.</p>
+        </div>
+        <div class="pilot__side">
+          <ul class="pilot__list">
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Kostenlos während der Pilotphase</li>
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Persönliche Einrichtung mit uns</li>
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Direkter Draht zum Entwickler</li>
+          </ul>
+          <a class="btn btn--white" href="mailto:info@e7studio.de?subject=Kanalo%20Pilotphase">Platz anfragen <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="studio" aria-labelledby="studio-title" style="padding-top: 0">
+    <div class="wrap studio">
+      <div>
+        <div class="section__head">
+          <span class="eyebrow">E7 Studio</span>
+          <h2 id="studio-title">Kanalo ist <span class="grad">erst der Anfang.</span></h2>
+          <p>E7 Studio entwickelt Shopify-Apps, die Händlern echte Arbeit abnehmen. Wenige Apps, dafür durchdacht und zuverlässig.</p>
+        </div>
+        <ul class="values">
+          <li><i><svg aria-hidden="true"><use href="#i-shopify"/></svg></i><div><b>Gebaut für Shopify</b><span>Unsere Apps laufen direkt im Shopify-Admin und fühlen sich an wie ein Teil davon.</span></div></li>
+          <li><i><svg aria-hidden="true"><use href="#i-shield"/></svg></i><div><b>Sorgsam mit deinen Daten</b><span>Wir speichern nur, was die App braucht. Entfernst du eine App, werden deine Shopdaten gelöscht.</span></div></li>
+          <li><i><svg aria-hidden="true"><use href="#i-chat"/></svg></i><div><b>Support auf Deutsch</b><span>Du schreibst direkt mit dem Menschen, der die App baut.</span></div></li>
+        </ul>
+      </div>
+      <div class="apps">
+        <article class="app">
+          <svg class="app__icon" viewBox="0 0 1200 1200" aria-hidden="true"><use href="#kanalo"/></svg>
+          <div>
+            <h3>Kanalo: Multichannel Sync</h3>
+            <p>Shopify mit Marktplätzen verbinden. Bestand, Bestellungen und Versand automatisch abgleichen.</p>
+            <span class="app__status">In Entwicklung · Pilotphase</span>
+          </div>
+        </article>
+        <article class="app app--next">
+          <span class="app__ph"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+          <div>
+            <h3>Die nächste App</h3>
+            <p>Welche Aufgabe in deinem Shop kostet dich jede Woche Zeit? Erzähl uns davon. Vielleicht wird daraus unsere nächste App.</p>
+            <span class="app__status">In Planung</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-title" style="padding-top: 0">
+    <div class="wrap">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-title">Häufige Fragen</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Mit welchen Marktplätzen funktioniert Kanalo?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <p>Wir starten mit Kaufland. OTTO, eBay und Amazon sollen danach folgen. Welche Marktplätze zuerst kommen, richten wir nach den Wünschen unserer Händler aus.</p>
+        </details>
+        <details>
+          <summary>Brauche ich ein eigenes Händlerkonto auf dem Marktplatz?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <p>Ja. Kanalo verbindet dein bestehendes Verkäuferkonto, zum Beispiel bei Kaufland, mit deinem Shopify-Shop. Ein neues Konto legt die App nicht für dich an.</p>
+        </details>
+        <details>
+          <summary>Muss ich meine Produkte neu anlegen?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <p>Nein. Kanalo nutzt deine Produkte aus Shopify und ordnet sie über den Barcode (EAN) dem passenden Angebot auf dem Marktplatz zu.</p>
+        </details>
+        <details>
+          <summary>Was kostet Kanalo?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <p>Während der Pilotphase ist Kanalo kostenlos. Die Preise für den offiziellen Start veröffentlichen wir rechtzeitig vorher.</p>
+        </details>
+        <details>
+          <summary>Was passiert mit meinen Daten?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <p>Wir speichern nur, was Kanalo für den Abgleich braucht. Zugangsdaten werden verschlüsselt gespeichert. Entfernst du die App, werden deine Shopdaten gelöscht.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="kontakt" aria-labelledby="contact-title">
+    <div class="wrap contact__inner">
+      <span class="eyebrow">Kontakt</span>
+      <h2 id="contact-title">Lass uns sprechen.</h2>
+      <p>Fragen zu Kanalo, Interesse an der Pilotphase oder eine Idee für eine App? Schreib uns, du bekommst eine persönliche Antwort.</p>
+      <div class="mail">
+        <a class="mail__addr" id="mail-addr" href="mailto:info@e7studio.de">info@e7studio.de</a>
+        <button class="btn btn--ghost" type="button" id="copy-mail"><svg aria-hidden="true"><use href="#i-mail"/></svg>Kopieren</button>
+      </div>
+      <p class="copy-hint" id="copy-hint" role="status"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__row">
+    <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
+      <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
+      <span>Studio</span>
+    </a>
+    <div class="footer__links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="mailto:info@e7studio.de">info@e7studio.de</a>
+    </div>
+    <span>© 2026 E7 Studio</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-mail');
+  var hint = document.getElementById('copy-hint');
+  var addr = document.getElementById('mail-addr');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var text = 'info@e7studio.de';
+    function selectText() {
+      try {
+        var r = document.createRange(); r.selectNodeContents(addr);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        hint.textContent = 'Adresse markiert. Mit Strg+C bzw. Cmd+C kopieren.';
+      } catch (e) { hint.textContent = text; }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { hint.textContent = 'E-Mail-Adresse kopiert.'; }, selectText);
+    } else { selectText(); }
+  });
+})();
+</script>
+</body>
+</html>
