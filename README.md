@@ -1,6 +1,6 @@
 # E7 Studio · Website (e7studio.de)
 
-Statische Website: `index.html`, `impressum.html`, `datenschutz.html`, `assets/`.
+Statische Website: `index.html`, `impressum.html`, `datenschutz.html`, `404.html`, `assets/` (Design, Favicon, Vorschaubild für Social Media, App-Symbol fürs Handy).
 Kein Build-Schritt nötig.
 
 ## Vor dem Hochladen

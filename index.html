@@ -6,7 +6,19 @@
 <title>E7 Studio</title>
 <meta name="description" content="Kanalo von E7 Studio verbindet deinen Shopify-Shop mit Marktplätzen wie Kaufland, OTTO und eBay. Bestand, Bestellungen und Versand gleichen sich automatisch ab.">
 <meta name="theme-color" content="#050E1C">
+<link rel="canonical" href="https://e7studio.de/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="E7 Studio">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://e7studio.de/">
+<meta property="og:title" content="Kanalo von E7 Studio: Verkaufe überall, steuere alles aus Shopify">
+<meta property="og:description" content="Kanalo verbindet deinen Shopify-Shop mit Kaufland, OTTO, eBay und Amazon. Bestand, Bestellungen und Versand gleichen sich automatisch ab.">
+<meta property="og:image" content="https://e7studio.de/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <!--FONTS-->
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -34,9 +46,12 @@
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z M8 9.5h8 M8 12.5h5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
 
 <header class="site-header">
   <div class="wrap">
@@ -49,13 +64,24 @@
         <a href="#vorteile">Vorteile</a>
         <a href="#so-gehts">So geht’s</a>
         <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
         <a class="btn btn--primary btn--sm" href="#pilot">Pilot werden</a>
+        <details class="menu">
+          <summary aria-label="Menü"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
+          <div class="menu__panel">
+            <a href="#vorteile">Vorteile</a>
+            <a href="#so-gehts">So geht’s</a>
+            <a href="#studio">Über E7 Studio</a>
+            <a href="#faq">FAQ</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+        </details>
       </div>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero__grid">
       <div class="hero__copy">
@@ -74,53 +100,89 @@
       </div>
 
       <div class="hub">
-        <svg class="hub__svg" viewBox="0 0 600 440" role="img" aria-label="Dein Shopify-Shop ist über Kanalo mit Kaufland, OTTO, eBay und Amazon verbunden">
+        <svg class="hub__svg hub__svg--h" viewBox="0 0 600 440" role="img" aria-label="Kaufland, OTTO, eBay und Amazon laufen über Kanalo in deinem Shopify-Shop zusammen">
           <defs>
             <radialGradient id="hubGlow"><stop offset="0" stop-color="#1483E3" stop-opacity="0.55"/><stop offset="1" stop-color="#1483E3" stop-opacity="0"/></radialGradient>
             <clipPath id="hubClip"><rect x="256" y="176" width="88" height="88" rx="22"/></clipPath>
           </defs>
           <circle cx="300" cy="220" r="140" fill="url(#hubGlow)"/>
           <g fill="none" stroke="rgba(148,184,222,0.26)" stroke-width="2">
-            <path d="M166 220 H256"/>
-            <path d="M344 220 C394 220 384 64 432 64"/>
-            <path d="M344 220 C394 220 384 168 432 168"/>
-            <path d="M344 220 C394 220 384 272 432 272"/>
-            <path d="M344 220 C394 220 384 376 432 376"/>
+            <path d="M168 64 C216 64 206 220 256 220"/>
+            <path d="M168 168 C216 168 206 220 256 220"/>
+            <path d="M168 272 C216 272 206 220 256 220"/>
+            <path d="M168 376 C216 376 206 220 256 220"/>
+            <path d="M344 220 H434"/>
           </g>
           <g fill="none" stroke="#4FA9F3" stroke-width="3" stroke-linecap="round">
-            <path class="flow" d="M166 220 H256"/>
-            <path class="flow" d="M344 220 C394 220 384 64 432 64"/>
-            <path class="flow flow--rev" d="M344 220 C394 220 384 168 432 168"/>
-            <path class="flow" d="M344 220 C394 220 384 272 432 272"/>
-            <path class="flow flow--rev" d="M344 220 C394 220 384 376 432 376"/>
+            <path class="flow" d="M168 64 C216 64 206 220 256 220"/>
+            <path class="flow flow--slow" d="M168 168 C216 168 206 220 256 220"/>
+            <path class="flow" d="M168 272 C216 272 206 220 256 220"/>
+            <path class="flow flow--slow" d="M168 376 C216 376 206 220 256 220"/>
+            <path class="flow" d="M344 220 H434"/>
           </g>
 
-          <rect x="6" y="178" width="160" height="84" rx="20" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
-          <rect x="22" y="198" width="44" height="44" rx="12" fill="rgba(52,211,153,0.14)"/>
-          <svg x="31" y="207" width="26" height="26" viewBox="0 0 24 24" color="#34D399"><use href="#i-bag"/></svg>
-          <text x="78" y="216" fill="#F2F7FD" font-size="15" font-weight="700">Dein Shop</text>
-          <text x="78" y="237" fill="#8EA4BC" font-size="12.5">auf Shopify</text>
+          <g font-size="15" font-weight="700" fill="#F2F7FD">
+            <rect x="6" y="40" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="30" cy="64" r="5" fill="#34D399"/><text x="44" y="69">Kaufland</text>
+            <rect x="6" y="144" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="30" cy="168" r="5" fill="#4FA9F3"/><text x="44" y="173">OTTO</text>
+            <rect x="6" y="248" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="30" cy="272" r="5" fill="#4FA9F3"/><text x="44" y="277">eBay</text>
+            <rect x="6" y="352" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+            <circle cx="30" cy="376" r="5" fill="#4FA9F3"/><text x="44" y="381">Amazon</text>
+          </g>
+          <g fill="none" stroke="#8EA4BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M136 60 h14 l-4 -4 M150 68 h-14 l4 4"/>
+            <path d="M136 164 h14 l-4 -4 M150 172 h-14 l4 4"/>
+            <path d="M136 268 h14 l-4 -4 M150 276 h-14 l4 4"/>
+            <path d="M136 372 h14 l-4 -4 M150 380 h-14 l4 4"/>
+          </g>
 
           <rect x="249" y="169" width="102" height="102" rx="28" fill="none" stroke="rgba(166,213,251,0.4)"/>
           <g clip-path="url(#hubClip)"><svg x="256" y="176" width="88" height="88" viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></g>
           <text x="300" y="298" text-anchor="middle" fill="#C5D5E6" font-size="13" font-weight="700">Kanalo</text>
 
-          <g font-size="15" font-weight="700" fill="#F2F7FD">
-            <rect x="432" y="40" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
-            <circle cx="456" cy="64" r="5" fill="#34D399"/><text x="472" y="69">Kaufland</text>
-            <rect x="432" y="144" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
-            <circle cx="456" cy="168" r="5" fill="#4FA9F3"/><text x="472" y="173">OTTO</text>
-            <rect x="432" y="248" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
-            <circle cx="456" cy="272" r="5" fill="#4FA9F3"/><text x="472" y="277">eBay</text>
-            <rect x="432" y="352" width="162" height="48" rx="24" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
-            <circle cx="456" cy="376" r="5" fill="#4FA9F3"/><text x="472" y="381">Amazon</text>
+          <rect x="434" y="178" width="160" height="84" rx="20" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+          <rect x="450" y="198" width="44" height="44" rx="12" fill="rgba(52,211,153,0.14)"/>
+          <svg x="459" y="207" width="26" height="26" viewBox="0 0 24 24" color="#34D399"><use href="#i-bag"/></svg>
+          <text x="506" y="216" fill="#F2F7FD" font-size="15" font-weight="700">Dein Shop</text>
+          <text x="506" y="237" fill="#8EA4BC" font-size="12.5">auf Shopify</text>
+        </svg>
+
+        <svg class="hub__svg hub__svg--v" viewBox="0 0 360 440" role="img" aria-label="Kaufland, OTTO, eBay und Amazon laufen über Kanalo in deinem Shopify-Shop zusammen">
+          <defs>
+            <radialGradient id="hubGlowV"><stop offset="0" stop-color="#1483E3" stop-opacity="0.55"/><stop offset="1" stop-color="#1483E3" stop-opacity="0"/></radialGradient>
+            <clipPath id="hubClipV"><rect x="138" y="190" width="84" height="84" rx="21"/></clipPath>
+          </defs>
+          <circle cx="180" cy="232" r="120" fill="url(#hubGlowV)"/>
+          <g fill="none" stroke="rgba(148,184,222,0.26)" stroke-width="2">
+            <path d="M48 72 C48 140 180 130 180 190"/>
+            <path d="M136 72 C136 140 180 130 180 190"/>
+            <path d="M224 72 C224 140 180 130 180 190"/>
+            <path d="M312 72 C312 140 180 130 180 190"/>
+            <path d="M180 274 V350"/>
           </g>
-          <g fill="none" stroke="#8EA4BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M562 60 h14 l-4 -4 M576 68 h-14 l4 4"/>
-            <path d="M562 164 h14 l-4 -4 M576 172 h-14 l4 4"/>
-            <path d="M562 268 h14 l-4 -4 M576 276 h-14 l4 4"/>
-            <path d="M562 372 h14 l-4 -4 M576 380 h-14 l4 4"/>
+          <g fill="none" stroke="#4FA9F3" stroke-width="3" stroke-linecap="round">
+            <path class="flow" d="M48 72 C48 140 180 130 180 190"/>
+            <path class="flow flow--slow" d="M136 72 C136 140 180 130 180 190"/>
+            <path class="flow" d="M224 72 C224 140 180 130 180 190"/>
+            <path class="flow flow--slow" d="M312 72 C312 140 180 130 180 190"/>
+            <path class="flow" d="M180 274 V350"/>
           </g>
+          <g font-size="13.5" font-weight="700" fill="#F2F7FD" text-anchor="middle">
+            <rect x="8" y="30" width="80" height="42" rx="21" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/><text x="48" y="56">Kaufland</text>
+            <rect x="96" y="30" width="80" height="42" rx="21" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/><text x="136" y="56">OTTO</text>
+            <rect x="184" y="30" width="80" height="42" rx="21" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/><text x="224" y="56">eBay</text>
+            <rect x="272" y="30" width="80" height="42" rx="21" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/><text x="312" y="56">Amazon</text>
+          </g>
+          <rect x="132" y="184" width="96" height="96" rx="26" fill="none" stroke="rgba(166,213,251,0.4)"/>
+          <g clip-path="url(#hubClipV)"><svg x="138" y="190" width="84" height="84" viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></g>
+          <text x="242" y="237" fill="#C5D5E6" font-size="13" font-weight="700">Kanalo</text>
+          <rect x="90" y="350" width="180" height="80" rx="20" fill="#0D2442" stroke="rgba(148,184,222,0.3)"/>
+          <rect x="106" y="368" width="44" height="44" rx="12" fill="rgba(52,211,153,0.14)"/>
+          <svg x="115" y="377" width="26" height="26" viewBox="0 0 24 24" color="#34D399"><use href="#i-bag"/></svg>
+          <text x="162" y="387" fill="#F2F7FD" font-size="15" font-weight="700">Dein Shop</text>
+          <text x="162" y="408" fill="#8EA4BC" font-size="12.5">auf Shopify</text>
         </svg>
 
         <div class="note note--order" aria-hidden="true">
@@ -151,13 +213,13 @@
 
   <section class="section" id="vorteile" aria-labelledby="benefits-title">
     <div class="wrap">
-      <div class="section__head">
+      <div class="section__head reveal">
         <span class="eyebrow">Warum Kanalo</span>
         <h2 id="benefits-title">Mehr Verkäufe. <span class="grad">Weniger Aufwand.</span></h2>
         <p>Marktplätze bringen dir Kunden, die deinen Shop noch nicht kennen. Kanalo erledigt die Arbeit dahinter, damit du nichts doppelt machen musst.</p>
       </div>
 
-      <div class="bento">
+      <div class="bento reveal">
         <article class="tile tile--wide tile--glow">
           <div class="tile__text">
             <h3>Neue Kunden auf jedem Marktplatz</h3>
@@ -227,11 +289,11 @@
 
   <section class="section" id="so-gehts" aria-labelledby="steps-title" style="padding-top: 0">
     <div class="wrap">
-      <div class="section__head section__head--center">
+      <div class="section__head section__head--center reveal">
         <span class="eyebrow">So geht’s</span>
         <h2 id="steps-title">In drei Schritten startklar.</h2>
       </div>
-      <ol class="steps">
+      <ol class="steps reveal">
         <li class="step"><h3>App installieren</h3><p>Kanalo aus dem Shopify App Store hinzufügen. Die App öffnet sich direkt in deinem Shopify-Admin.</p></li>
         <li class="step"><h3>Marktplatz verbinden</h3><p>Zugangsdaten deines Händlerkontos eintragen. Sie werden verschlüsselt gespeichert.</p></li>
         <li class="step"><h3>Verkaufen</h3><p>Kanalo ordnet deine Produkte zu und hält Bestand, Bestellungen und Versand ab jetzt synchron.</p></li>
@@ -241,7 +303,7 @@
 
   <section class="section" id="pilot" aria-labelledby="pilot-title" style="padding-top: 0">
     <div class="wrap">
-      <div class="pilot__card">
+      <div class="pilot__card reveal">
         <div>
           <span class="eyebrow">Pilotphase</span>
           <h2 id="pilot-title">Sei einer der ersten Händler mit Kanalo.</h2>
@@ -262,7 +324,7 @@
   <section class="section" id="studio" aria-labelledby="studio-title" style="padding-top: 0">
     <div class="wrap studio">
       <div>
-        <div class="section__head">
+        <div class="section__head reveal">
           <span class="eyebrow">E7 Studio</span>
           <h2 id="studio-title">Kanalo ist <span class="grad">erst der Anfang.</span></h2>
           <p>E7 Studio entwickelt Shopify-Apps, die Händlern echte Arbeit abnehmen. Wenige Apps, dafür durchdacht und zuverlässig.</p>
@@ -273,7 +335,7 @@
           <li><i><svg aria-hidden="true"><use href="#i-chat"/></svg></i><div><b>Support auf Deutsch</b><span>Du schreibst direkt mit dem Menschen, der die App baut.</span></div></li>
         </ul>
       </div>
-      <div class="apps">
+      <div class="apps reveal">
         <article class="app">
           <svg class="app__icon" viewBox="0 0 1200 1200" aria-hidden="true"><use href="#kanalo"/></svg>
           <div>
@@ -296,11 +358,11 @@
 
   <section class="section" id="faq" aria-labelledby="faq-title" style="padding-top: 0">
     <div class="wrap">
-      <div class="section__head section__head--center">
+      <div class="section__head section__head--center reveal">
         <span class="eyebrow">FAQ</span>
         <h2 id="faq-title">Häufige Fragen</h2>
       </div>
-      <div class="faq">
+      <div class="faq reveal">
         <details open>
           <summary>Mit welchen Marktplätzen funktioniert Kanalo?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
           <p>Wir starten mit Kaufland. OTTO, eBay und Amazon sollen danach folgen. Welche Marktplätze zuerst kommen, richten wir nach den Wünschen unserer Händler aus.</p>
@@ -340,17 +402,23 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap footer__row">
-    <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
-      <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
-      <span>Studio</span>
-    </a>
-    <div class="footer__links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="mailto:info@e7studio.de">info@e7studio.de</a>
+  <div class="wrap footer__top">
+    <div class="footer__brand">
+      <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
+        <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
+        <span>Studio</span>
+      </a>
+      <p>Shopify-Apps für Händler im deutschsprachigen Raum. Entwickelt in Ettlingen.</p>
     </div>
+    <nav class="footer__cols" aria-label="Fußzeile">
+      <div><h4>Kanalo</h4><a href="index.html#vorteile">Vorteile</a><a href="index.html#so-gehts">So geht’s</a><a href="index.html#faq">FAQ</a></div>
+      <div><h4>Studio</h4><a href="index.html#pilot">Pilotphase</a><a href="index.html#studio">Über E7 Studio</a><a href="index.html#kontakt">Kontakt</a></div>
+      <div><h4>Rechtliches</h4><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    </nav>
+  </div>
+  <div class="wrap footer__bottom">
     <span>© 2026 E7 Studio</span>
+    <a href="mailto:info@e7studio.de">info@e7studio.de</a>
   </div>
 </footer>
 
@@ -373,6 +441,25 @@
       navigator.clipboard.writeText(text).then(function () { hint.textContent = 'E-Mail-Adresse kopiert.'; }, selectText);
     } else { selectText(); }
   });
+})();
+
+(function () {
+  // Lichtschein, der der Maus über den Kacheln folgt
+  document.querySelectorAll('.tile').forEach(function (t) {
+    t.addEventListener('pointermove', function (e) {
+      var r = t.getBoundingClientRect();
+      t.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      t.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+  // Handy-Menü nach Klick auf einen Link schließen
+  var menu = document.querySelector('.menu');
+  if (menu) {
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { menu.open = false; });
+    });
+    document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  }
 })();
 </script>
 </body>

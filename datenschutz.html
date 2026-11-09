@@ -7,6 +7,7 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#050E1C">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <!--FONTS-->
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -17,6 +18,8 @@
     <symbol id="e7Light" viewBox="60 70 531.4 260"><path d="M60 70 H300 L266.1 130 H120 V170 H250 V230 H120 V270 H280 V330 H60 Z" fill="#FFFFFF"/><path d="M332 70 H591.4 L444.5 330 H375.5 L488.6 130 H298.1 Z" fill="url(#e7Seven)"/></symbol>
   </defs>
 </svg>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
 
 <header class="site-header">
   <div class="wrap">
@@ -30,7 +33,7 @@
   </div>
 </header>
 
-<main class="legal">
+<main class="legal" id="main">
   <div class="wrap">
     <article>
       <h1>Datenschutzerklärung</h1>
@@ -88,17 +91,23 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap footer__row">
-    <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
-      <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
-      <span>Studio</span>
-    </a>
-    <div class="footer__links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html" aria-current="page">Datenschutz</a>
-      <a href="mailto:info@e7studio.de">info@e7studio.de</a>
+  <div class="wrap footer__top">
+    <div class="footer__brand">
+      <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
+        <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
+        <span>Studio</span>
+      </a>
+      <p>Shopify-Apps für Händler im deutschsprachigen Raum. Entwickelt in Ettlingen.</p>
     </div>
+    <nav class="footer__cols" aria-label="Fußzeile">
+      <div><h4>Kanalo</h4><a href="index.html#vorteile">Vorteile</a><a href="index.html#so-gehts">So geht’s</a><a href="index.html#faq">FAQ</a></div>
+      <div><h4>Studio</h4><a href="index.html#pilot">Pilotphase</a><a href="index.html#studio">Über E7 Studio</a><a href="index.html#kontakt">Kontakt</a></div>
+      <div><h4>Rechtliches</h4><a href="impressum.html">Impressum</a><a href="datenschutz.html" aria-current="page">Datenschutz</a></div>
+    </nav>
+  </div>
+  <div class="wrap footer__bottom">
     <span>© 2026 E7 Studio</span>
+    <a href="mailto:info@e7studio.de">info@e7studio.de</a>
   </div>
 </footer>
 </body>
