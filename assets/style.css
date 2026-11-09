@@ -2,15 +2,13 @@
    Layout: durchgehend dunkles Design („Nachtblau“), eine zentrale Spalte (max. 1200 px),
    Hero mit Verbindungsgrafik Shop → Kanalo → Marktplätze, danach Bento-Raster, Schritte, Ausblick, FAQ. */
 
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("fonts/plus-jakarta-sans-latin-wght-normal.woff2") format("woff2-variations");
-  font-weight: 200 800; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
-  font-weight: 100 800; font-style: normal; font-display: swap;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  /* restliche Variablen bleiben gleich */
 }
 
 :root {
