@@ -9,9 +9,13 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="format-detection" content="telephone=no">
 <link rel="canonical" href="https://e7studio.de/">
+<link rel="alternate" hreflang="de" href="https://e7studio.de/">
+<link rel="alternate" hreflang="en" href="https://e7studio.de/en/">
+<link rel="alternate" hreflang="x-default" href="https://e7studio.de/en/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="E7 Studio">
 <meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://e7studio.de/">
 <meta property="og:title" content="Kanalo von E7 Studio: Verkaufe überall, steuere alles aus Shopify">
 <meta property="og:description" content="Kanalo verbindet deinen Shopify-Shop mit Kaufland, OTTO, eBay und Amazon. Bestand, Bestellungen und Versand gleichen sich automatisch ab. Bald verfügbar.">
@@ -24,7 +28,7 @@
 <link rel="preload" href="/assets/inter-400.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/assets/inter-display-800.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"E7 Studio","url":"https://e7studio.de/","logo":"https://e7studio.de/assets/apple-touch-icon.png","email":"info@e7studio.de","founder":{"@type":"Person","name":"Erwin Nuss"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"E7 Studio","url":"https://e7studio.de/","logo":"https://e7studio.de/assets/apple-touch-icon.png","email":"info@e7studio.de","knowsLanguage":["de","en"],"founder":{"@type":"Person","name":"Erwin Nuss"}}</script>
 </head>
 <body>
 <div class="ambient" aria-hidden="true"></div>
@@ -69,7 +73,8 @@
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M6 3v15l3.8-3.5 2.6 5.8 2.3-1-2.6-5.7 5.3-.2L6 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
-    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 11v5.5 M12 7.8v.2" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3.5 12h17 M12 3.5c2.4 2.5 3.5 5.3 3.5 8.5s-1.1 6-3.5 8.5c-2.4-2.5-3.5-5.3-3.5-8.5s1.1-6 3.5-8.5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 11v5.5 M12 7.8v.2" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></symbol>
   </defs>
 </svg>
 
@@ -87,6 +92,7 @@
         <a href="#sicherheit">Sicherheit</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#faq">FAQ</a>
+        <div class="lang" role="group" aria-label="Sprache"><a href="/" hreflang="de" lang="de" aria-current="true">DE</a><a href="/en/" hreflang="en" lang="en">EN</a></div>
         <a class="btn btn--primary btn--sm nav__cta" href="#start"><svg aria-hidden="true"><use href="#i-bell"/></svg><span>Benachrichtigen</span></a>
         <details class="menu">
           <summary aria-label="Menü"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
@@ -98,6 +104,7 @@
             <a href="#studio">Über E7 Studio</a>
             <a href="#faq">FAQ</a>
             <a href="#kontakt">Kontakt</a>
+            <a class="menu__lang" href="/en/" hreflang="en" lang="en"><svg aria-hidden="true"><use href="#i-globe"/></svg>English</a>
           </div>
         </details>
       </div>
@@ -119,7 +126,7 @@
         <div class="hero__trust">
           <span><svg aria-hidden="true"><use href="#i-check"/></svg>Offizielle Schnittstellen</span>
           <span><svg aria-hidden="true"><use href="#i-check"/></svg>Läuft im Shopify-Admin</span>
-          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Support auf Deutsch</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Support auf Deutsch &amp; Englisch</span>
         </div>
       </div>
 
@@ -546,7 +553,7 @@
         <article class="trust__item glass ring"><span class="trust__icon"><svg aria-hidden="true"><use href="#i-guard"/></svg></span><h3>Im Zweifel nichts ändern</h3><p>Bei unklaren Daten oder Verbindungsfehlern überträgt Kanalo keine Änderungen. Dein Bestand wird nie versehentlich auf null gesetzt.</p></article>
         <article class="trust__item glass ring"><span class="trust__icon"><svg aria-hidden="true"><use href="#i-list"/></svg></span><h3>Jede Änderung nachvollziehbar</h3><p>Jeder Abgleich wird protokolliert. Du siehst jederzeit, wann sich was geändert hat.</p></article>
         <article class="trust__item glass ring"><span class="trust__icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span><h3>Datensparsam</h3><p>Wir verarbeiten nur, was für den Abgleich nötig ist. Entfernst du die App, werden deine Shopdaten gelöscht.</p></article>
-        <article class="trust__item glass ring"><span class="trust__icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Persönlicher Support</h3><p>Bei Fragen schreibst du direkt mit dem Menschen, der die App entwickelt. Auf Deutsch.</p></article>
+        <article class="trust__item glass ring"><span class="trust__icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Persönlicher Support</h3><p>Bei Fragen schreibst du direkt mit dem Menschen, der die App entwickelt. Auf Deutsch oder Englisch.</p></article>
       </div>
     </div>
   </section>
@@ -589,11 +596,11 @@
         <div class="section__head">
           <span class="eyebrow">E7 Studio</span>
           <h2 id="studio-title">Kanalo ist <span class="grad">erst der Anfang.</span></h2>
-          <p>E7 Studio entwickelt Apps für Shopify-Händler im deutschsprachigen Raum. Wenige Apps, dafür durchdacht, zuverlässig und mit persönlichem Support.</p>
+          <p>E7 Studio entwickelt Apps für Shopify-Händler. Wenige Apps, dafür durchdacht, zuverlässig und mit persönlichem Support.</p>
         </div>
         <ul class="facts">
           <li><svg aria-hidden="true"><use href="#i-shopify"/></svg>Spezialisiert auf Shopify</li>
-          <li><svg aria-hidden="true"><use href="#i-pin"/></svg>Für Deutschland, Österreich und die Schweiz</li>
+          <li><svg aria-hidden="true"><use href="#i-globe"/></svg>Auf Deutsch und Englisch</li>
           <li><svg aria-hidden="true"><use href="#i-chat"/></svg>Persönlich erreichbar</li>
         </ul>
       </div>
@@ -676,7 +683,7 @@
         <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
         <span>Studio</span>
       </a>
-      <p>Apps für Shopify-Händler im deutschsprachigen Raum.</p>
+      <p>Apps, die Shopify-Händlern Arbeit abnehmen.</p>
     </div>
     <nav class="footer__cols" aria-label="Fußzeile">
       <div><h4>Kanalo</h4><a href="/#vorschau">Vorschau</a><a href="/#funktionen">Funktionen</a><a href="/#sicherheit">Sicherheit</a><a href="/#roadmap">Roadmap</a></div>
@@ -686,10 +693,18 @@
   </div>
   <div class="wrap footer__bottom">
     <span>© 2026 E7 Studio</span>
+    <span class="footer__lang"><a href="/" hreflang="de" lang="de" aria-current="true">Deutsch</a><a href="/en/" hreflang="en" lang="en">English</a></span>
     <p>Shopify, Kaufland, OTTO, eBay und Amazon sind Marken ihrer jeweiligen Inhaber.</p>
     <a href="mailto:info@e7studio.de">info@e7studio.de</a>
   </div>
 </footer>
+
+<div class="langtip" id="langtip" data-want="en" lang="en" hidden>
+  <svg aria-hidden="true"><use href="#i-globe"/></svg>
+  <span>This page is also available in English.</span>
+  <a class="btn btn--primary btn--sm" href="/en/" hreflang="en">View in English</a>
+  <button type="button" class="langtip__x" aria-label="Close"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+</div>
 
 <script>
 (function () {
@@ -732,6 +747,19 @@
   if (menu) {
     menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.open = false; }); });
     document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  }
+
+  // Sprache: Hinweis, wenn der Browser eine andere Sprache bevorzugt
+  function remember() { try { localStorage.setItem('e7-lang-chosen', '1'); } catch (e) {} }
+  document.querySelectorAll('a[hreflang]').forEach(function (a) { a.addEventListener('click', remember); });
+  var tip = document.getElementById('langtip');
+  if (tip) {
+    var first = String((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+    var isDe = first.indexOf('de') === 0;
+    var chosen = false;
+    try { chosen = localStorage.getItem('e7-lang-chosen') === '1'; } catch (e) {}
+    if (first && !chosen && (tip.getAttribute('data-want') === 'en' ? !isDe : isDe)) tip.hidden = false;
+    tip.querySelector('.langtip__x').addEventListener('click', function () { tip.hidden = true; remember(); });
   }
 
   // Navigation zeigt, in welchem Abschnitt man gerade ist
