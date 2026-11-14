@@ -66,6 +66,8 @@
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M6 3v15l3.8-3.5 2.6 5.8 2.3-1-2.6-5.7 5.3-.2L6 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 11v5.5 M12 7.8v.2" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></symbol>
   </defs>
 </svg>
 
@@ -83,7 +85,7 @@
         <a href="#sicherheit">Sicherheit</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn--primary btn--sm" href="#start">Benachrichtigen</a>
+        <a class="btn btn--primary btn--sm nav__cta" href="#start"><svg aria-hidden="true"><use href="#i-bell"/></svg><span>Benachrichtigen</span></a>
         <details class="menu">
           <summary aria-label="Menü"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
           <div class="menu__panel">
@@ -235,51 +237,202 @@
         <span class="eyebrow">Vorschau</span>
         <h2 id="preview-title">Alles im Blick. <span class="grad">Direkt in Shopify.</span></h2>
         <p>Kanalo läuft als App in deinem Shopify-Admin. Auf einen Blick siehst du, welche Produkte verknüpft sind, was verkauft wurde und was gerade passiert.</p>
+        <p class="try"><svg aria-hidden="true"><use href="#i-pointer"/></svg>Probier es aus: Klick dich durch die App.</p>
       </div>
 
       <figure class="window glass ring reveal" aria-label="Vorschau der Kanalo-Oberfläche mit Beispieldaten">
         <div class="window__bar">
-          <span class="window__url"><svg aria-hidden="true"><use href="#i-lock"/></svg>admin.shopify.com<span>&nbsp;/ Apps / Kanalo</span></span>
+          <span class="window__url"><svg aria-hidden="true"><use href="#i-lock"/></svg>admin.shopify.com<span>&nbsp;/ Apps / Kanalo<span id="win-crumb"></span></span></span>
           <span class="tag">Beispieldaten</span>
         </div>
         <div class="window__body">
-          <aside class="win-side" aria-hidden="true">
-            <div class="win-app"><svg viewBox="0 0 1200 1200"><use href="#kanalo"/></svg><b>Kanalo</b></div>
-            <span class="is-active"><svg><use href="#i-grid"/></svg>Übersicht</span>
-            <span><svg><use href="#i-box"/></svg>Produkte</span>
-            <span><svg><use href="#i-receipt"/></svg>Bestellungen</span>
-            <span><svg><use href="#i-store"/></svg>Marktplätze</span>
-            <span><svg><use href="#i-clock"/></svg>Protokoll</span>
-            <span><svg><use href="#i-gear"/></svg>Einstellungen</span>
-          </aside>
+          <div class="win-side">
+            <div class="win-app" aria-hidden="true"><svg viewBox="0 0 1200 1200"><use href="#kanalo"/></svg><b>Kanalo</b></div>
+            <div class="win-tabs" role="tablist" aria-label="Bereiche der App" aria-orientation="vertical">
+              <button type="button" class="win-tab" role="tab" id="t-uebersicht" aria-controls="v-uebersicht" aria-selected="true"><svg aria-hidden="true"><use href="#i-grid"/></svg>Übersicht</button>
+              <button type="button" class="win-tab" role="tab" id="t-produkte" aria-controls="v-produkte" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-box"/></svg>Produkte</button>
+              <button type="button" class="win-tab" role="tab" id="t-bestellungen" aria-controls="v-bestellungen" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-receipt"/></svg>Bestellungen</button>
+              <button type="button" class="win-tab" role="tab" id="t-marktplaetze" aria-controls="v-marktplaetze" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-store"/></svg>Marktplätze</button>
+              <button type="button" class="win-tab" role="tab" id="t-protokoll" aria-controls="v-protokoll" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-clock"/></svg>Protokoll</button>
+              <button type="button" class="win-tab" role="tab" id="t-einstellungen" aria-controls="v-einstellungen" aria-selected="false" tabindex="-1"><svg aria-hidden="true"><use href="#i-gear"/></svg>Einstellungen</button>
+            </div>
+          </div>
+
           <div class="win-main">
-            <div class="win-head">
-              <div><h3>Übersicht</h3><p>Letzter Abgleich vor 2 Minuten</p></div>
-              <span class="live"><i></i>Synchronisierung aktiv</span>
-            </div>
-            <div class="kpis">
-              <div class="kpi"><span>Verknüpfte Produkte</span><strong>248</strong><small>von 256 Produkten</small></div>
-              <div class="kpi"><span>Bestellungen heute</span><strong>17</strong><small>davon 6 über Kaufland</small></div>
-              <div class="kpi"><span>Versand gemeldet</span><strong>12</strong><small>alle übertragen</small></div>
-            </div>
-            <div class="win-cols">
-              <div class="panel">
-                <h4>Marktplätze</h4>
-                <ul class="channels">
-                  <li><b>Kaufland</b><span class="st st--ok">Verbunden</span></li>
-                  <li><b>OTTO</b><span class="st st--soon">Bald verfügbar</span></li>
-                  <li><b>eBay</b><span class="st">Geplant</span></li>
-                  <li><b>Amazon</b><span class="st">Geplant</span></li>
-                </ul>
+            <!-- Übersicht -->
+            <div class="win-view is-active" role="tabpanel" id="v-uebersicht" aria-labelledby="t-uebersicht" tabindex="0">
+              <div class="win-head">
+                <div><h3>Übersicht</h3><p>Letzter Abgleich vor 2 Minuten</p></div>
+                <span class="live" id="live-status"><i></i><span>Synchronisierung aktiv</span></span>
               </div>
-              <div class="panel">
-                <h4>Letzte Aktivitäten</h4>
-                <ul class="feed">
-                  <li><i class="ic ic--blue"><svg aria-hidden="true"><use href="#i-sync"/></svg></i><div><b>Bestand aktualisiert</b><span>Leinenhemd, Größe M · 3 Stück · Kaufland</span></div><time>09:41</time></li>
-                  <li><i class="ic ic--green"><svg aria-hidden="true"><use href="#i-bag"/></svg></i><div><b>Bestellung übernommen</b><span>#1042 · 49,90 € · Kaufland</span></div><time>09:38</time></li>
-                  <li><i class="ic ic--violet"><svg aria-hidden="true"><use href="#i-truck"/></svg></i><div><b>Versand gemeldet</b><span>#1039 · Sendungsnummer übertragen</span></div><time>09:12</time></li>
-                  <li><i class="ic ic--cyan"><svg aria-hidden="true"><use href="#i-link"/></svg></i><div><b>Produkt verknüpft</b><span>Thermobecher 500 ml · über Barcode</span></div><time>08:55</time></li>
-                </ul>
+              <div class="kpis">
+                <div class="kpi"><span>Verknüpfte Produkte</span><strong>248</strong><small>von 256 Produkten</small></div>
+                <div class="kpi"><span>Bestellungen heute</span><strong>17</strong><small>davon 6 über Kaufland</small></div>
+                <div class="kpi"><span>Versand gemeldet</span><strong>12</strong><small>alle übertragen</small></div>
+              </div>
+              <div class="win-cols">
+                <div class="panel">
+                  <div class="panel__head"><h4>Marktplätze</h4><button type="button" class="more" data-goto="marktplaetze">Alle ansehen<svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+                  <ul class="channels">
+                    <li><b>Kaufland</b><span class="st st--ok">Verbunden</span></li>
+                    <li><b>OTTO</b><span class="st st--soon">Als Nächstes</span></li>
+                    <li><b>eBay</b><span class="st">Geplant</span></li>
+                    <li><b>Amazon</b><span class="st">Geplant</span></li>
+                  </ul>
+                </div>
+                <div class="panel">
+                  <div class="panel__head"><h4>Letzte Aktivitäten</h4><button type="button" class="more" data-goto="protokoll">Zum Protokoll<svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+                  <ul class="feed">
+                    <li><i class="ic ic--blue"><svg aria-hidden="true"><use href="#i-sync"/></svg></i><div><b>Bestand aktualisiert</b><span>Leinenhemd, Größe M · 3 Stück · Kaufland</span></div><time>09:41</time></li>
+                    <li><i class="ic ic--green"><svg aria-hidden="true"><use href="#i-bag"/></svg></i><div><b>Bestellung übernommen</b><span>#1042 · 49,90 € · Kaufland</span></div><time>09:38</time></li>
+                    <li><i class="ic ic--violet"><svg aria-hidden="true"><use href="#i-truck"/></svg></i><div><b>Versand gemeldet</b><span>#1039 · Sendungsnummer übertragen</span></div><time>09:12</time></li>
+                    <li><i class="ic ic--cyan"><svg aria-hidden="true"><use href="#i-link"/></svg></i><div><b>Produkt verknüpft</b><span>Thermobecher 500 ml · über Barcode</span></div><time>08:55</time></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Produkte -->
+            <div class="win-view" role="tabpanel" id="v-produkte" aria-labelledby="t-produkte" tabindex="0">
+              <div class="win-head">
+                <div><h3>Produkte</h3><p>248 von 256 Produkten mit Kaufland verknüpft</p></div>
+                <div class="seg" role="group" aria-label="Produkte filtern" data-target="tbl-prod">
+                  <button type="button" aria-pressed="true" data-filter="all">Alle</button>
+                  <button type="button" aria-pressed="false" data-filter="ok">Verknüpft</button>
+                  <button type="button" aria-pressed="false" data-filter="warn">Zu prüfen</button>
+                </div>
+              </div>
+              <div class="tbl-wrap">
+                <table class="tbl tbl--prod" id="tbl-prod">
+                  <thead><tr><th scope="col">Produkt</th><th scope="col">Barcode (EAN)</th><th scope="col" class="num">Bestand</th><th scope="col">Kaufland</th></tr></thead>
+                  <tbody>
+                    <tr data-state="ok"><td class="c-main"><span class="prod"><span class="thumb th--sky" aria-hidden="true">LH</span><span><b>Leinenhemd</b><small>Größe M<span class="sku"> · SKU LH-M</span></small></span></span></td><td class="c-ean mono" data-label="EAN">2000000000015</td><td class="c-stock num" data-label="Bestand">3</td><td class="c-st"><span class="st st--ok">Verknüpft</span></td></tr>
+                    <tr data-state="ok"><td class="c-main"><span class="prod"><span class="thumb th--cyan" aria-hidden="true">TB</span><span><b>Thermobecher</b><small>500 ml<span class="sku"> · SKU TB-500</span></small></span></span></td><td class="c-ean mono" data-label="EAN">2000000000022</td><td class="c-stock num" data-label="Bestand">25</td><td class="c-st"><span class="st st--ok">Verknüpft</span></td></tr>
+                    <tr data-state="ok"><td class="c-main"><span class="prod"><span class="thumb th--green" aria-hidden="true">YM</span><span><b>Yogamatte Kork</b><small>4 mm<span class="sku"> · SKU YM-KORK</span></small></span></span></td><td class="c-ean mono" data-label="EAN">2000000000039</td><td class="c-stock num" data-label="Bestand">9</td><td class="c-st"><span class="st st--ok">Verknüpft</span></td></tr>
+                    <tr data-state="ok"><td class="c-main"><span class="prod"><span class="thumb th--violet" aria-hidden="true">TL</span><span><b>Tischlampe</b><small>LED, Schwarz<span class="sku"> · SKU LED-SL</span></small></span></span></td><td class="c-ean mono" data-label="EAN">2000000000046</td><td class="c-stock num is-zero" data-label="Bestand">0</td><td class="c-st"><span class="st st--ok">Verknüpft</span></td></tr>
+                    <tr data-state="warn"><td class="c-main"><span class="prod"><span class="thumb th--rose" aria-hidden="true">DK</span><span><b>Duftkerze</b><small>Lavendel<span class="sku"> · SKU DK-LAV</span></small></span></span></td><td class="c-ean mono is-missing" data-label="EAN">fehlt</td><td class="c-stock num" data-label="Bestand">14</td><td class="c-st"><span class="st st--warn">Barcode fehlt</span></td></tr>
+                    <tr data-state="warn"><td class="c-main"><span class="prod"><span class="thumb th--amber" aria-hidden="true">KB</span><span><b>Kissenbezug</b><small>50 × 50 cm<span class="sku"> · SKU KB-50</span></small></span></span></td><td class="c-ean mono is-bad" data-label="EAN">200000000006</td><td class="c-stock num" data-label="Bestand">7</td><td class="c-st"><span class="st st--warn">Barcode prüfen</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="win-foot"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Produkte ohne gültigen Barcode werden nicht verknüpft und bleiben unverändert.</span></p>
+            </div>
+
+            <!-- Bestellungen -->
+            <div class="win-view" role="tabpanel" id="v-bestellungen" aria-labelledby="t-bestellungen" tabindex="0">
+              <div class="win-head">
+                <div><h3>Bestellungen</h3><p>Heute 6 Bestellungen über Kaufland, alle in Shopify übernommen</p></div>
+                <div class="seg" role="group" aria-label="Bestellungen filtern" data-target="tbl-orders">
+                  <button type="button" aria-pressed="true" data-filter="all">Alle</button>
+                  <button type="button" aria-pressed="false" data-filter="open">Zu versenden</button>
+                  <button type="button" aria-pressed="false" data-filter="done">Versendet</button>
+                </div>
+              </div>
+              <div class="tbl-wrap">
+                <table class="tbl tbl--orders" id="tbl-orders">
+                  <thead><tr><th scope="col">Bestellung</th><th scope="col">Kunde</th><th scope="col">Marktplatz</th><th scope="col">Eingang</th><th scope="col" class="num">Betrag</th><th scope="col">Status</th></tr></thead>
+                  <tbody>
+                    <tr data-state="open"><td class="c-id"><b>#1042</b></td><td class="c-cust">Tobias M.</td><td class="c-mkt">Kaufland</td><td class="c-time">09:38</td><td class="c-sum num">49,90 €</td><td class="c-st"><span class="st st--soon">Zu versenden</span></td></tr>
+                    <tr data-state="open"><td class="c-id"><b>#1040</b></td><td class="c-cust">Sarah W.</td><td class="c-mkt">Kaufland</td><td class="c-time">09:05</td><td class="c-sum num">32,50 €</td><td class="c-st"><span class="st st--soon">Zu versenden</span></td></tr>
+                    <tr data-state="done"><td class="c-id"><b>#1039</b></td><td class="c-cust">Jonas B.</td><td class="c-mkt">Kaufland</td><td class="c-time">08:21</td><td class="c-sum num">119,00 €</td><td class="c-st"><span class="st st--ok">Versand gemeldet</span></td></tr>
+                    <tr data-state="done"><td class="c-id"><b>#1036</b></td><td class="c-cust">Anna S.</td><td class="c-mkt">Kaufland</td><td class="c-time">07:46</td><td class="c-sum num">24,90 €</td><td class="c-st"><span class="st st--ok">Versand gemeldet</span></td></tr>
+                    <tr data-state="done"><td class="c-id"><b>#1034</b></td><td class="c-cust">Lukas H.</td><td class="c-mkt">Kaufland</td><td class="c-time">07:10</td><td class="c-sum num">64,80 €</td><td class="c-st"><span class="st st--ok">Versand gemeldet</span></td></tr>
+                    <tr data-state="done"><td class="c-id"><b>#1031</b></td><td class="c-cust">Mia R.</td><td class="c-mkt">Kaufland</td><td class="c-time">06:32</td><td class="c-sum num">18,90 €</td><td class="c-st"><span class="st st--ok">Versand gemeldet</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="win-foot"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Du versendest wie gewohnt in Shopify. Kanalo meldet die Sendungsnummer an den Marktplatz.</span></p>
+            </div>
+
+            <!-- Marktplätze -->
+            <div class="win-view" role="tabpanel" id="v-marktplaetze" aria-labelledby="t-marktplaetze" tabindex="0">
+              <div class="win-head">
+                <div><h3>Marktplätze</h3><p>Ein Shop, mehrere Marktplätze. Alles läuft über Kanalo.</p></div>
+              </div>
+              <div class="mkts">
+                <article class="mkt mkt--main">
+                  <div class="mkt__top">
+                    <span class="mk mk--sky" aria-hidden="true">K</span>
+                    <div><h4>Kaufland</h4><small>kaufland.de</small></div>
+                    <span class="st st--ok">Verbunden</span>
+                  </div>
+                  <dl class="mkt__stats">
+                    <div><dt>Verknüpfte Produkte</dt><dd>248</dd></div>
+                    <div><dt>Bestellungen heute</dt><dd>6</dd></div>
+                    <div><dt>Letzter Abgleich</dt><dd>vor 2 Min.</dd></div>
+                  </dl>
+                  <p class="mkt__foot"><svg aria-hidden="true"><use href="#i-lock"/></svg>Zugangsdaten verschlüsselt gespeichert</p>
+                </article>
+                <article class="mkt">
+                  <div class="mkt__top">
+                    <span class="mk mk--violet" aria-hidden="true">O</span>
+                    <div><h4>OTTO</h4><small>otto.de</small></div>
+                  </div>
+                  <p>Die nächste Anbindung nach dem Start von Kanalo.</p>
+                  <span class="st st--soon">Als Nächstes</span>
+                </article>
+                <article class="mkt">
+                  <div class="mkt__top">
+                    <span class="mk mk--slate" aria-hidden="true">e</span>
+                    <div><h4>eBay</h4><small>ebay.de</small></div>
+                  </div>
+                  <p>Die Reihenfolge richtet sich nach den Wünschen unserer Händler.</p>
+                  <span class="st">Geplant</span>
+                </article>
+                <article class="mkt">
+                  <div class="mkt__top">
+                    <span class="mk mk--slate" aria-hidden="true">A</span>
+                    <div><h4>Amazon</h4><small>amazon.de</small></div>
+                  </div>
+                  <p>Dir ist ein Marktplatz besonders wichtig? Schreib uns.</p>
+                  <span class="st">Geplant</span>
+                </article>
+              </div>
+            </div>
+
+            <!-- Protokoll -->
+            <div class="win-view" role="tabpanel" id="v-protokoll" aria-labelledby="t-protokoll" tabindex="0">
+              <div class="win-head">
+                <div><h3>Protokoll</h3><p>Jede Änderung mit Uhrzeit, jederzeit nachvollziehbar</p></div>
+                <div class="seg" role="group" aria-label="Protokoll filtern" data-target="log">
+                  <button type="button" aria-pressed="true" data-filter="all">Alle</button>
+                  <button type="button" aria-pressed="false" data-filter="warn">Hinweise</button>
+                </div>
+              </div>
+              <ol class="log" id="log">
+                <li data-state="ok"><time>09:41</time><span class="lt lt--blue"><svg aria-hidden="true"><use href="#i-sync"/></svg>Bestand</span><p><b>Leinenhemd, Größe M:</b> 4 → 3 Stück an Kaufland übertragen</p><span class="st st--ok">Erledigt</span></li>
+                <li data-state="ok"><time>09:38</time><span class="lt lt--green"><svg aria-hidden="true"><use href="#i-bag"/></svg>Bestellung</span><p><b>#1042</b> von Kaufland in Shopify angelegt</p><span class="st st--ok">Erledigt</span></li>
+                <li data-state="ok"><time>09:12</time><span class="lt lt--violet"><svg aria-hidden="true"><use href="#i-truck"/></svg>Versand</span><p><b>#1039:</b> Sendungsnummer an Kaufland gemeldet</p><span class="st st--ok">Erledigt</span></li>
+                <li data-state="ok"><time>08:55</time><span class="lt lt--cyan"><svg aria-hidden="true"><use href="#i-link"/></svg>Verknüpfung</span><p><b>Thermobecher 500 ml</b> über Barcode verknüpft</p><span class="st st--ok">Erledigt</span></li>
+                <li data-state="warn"><time>08:40</time><span class="lt lt--amber"><svg aria-hidden="true"><use href="#i-guard"/></svg>Prüfung</span><p><b>Duftkerze Lavendel:</b> kein Barcode hinterlegt, Produkt bleibt unverändert</p><span class="st st--warn">Hinweis</span></li>
+                <li data-state="warn"><time>08:31</time><span class="lt"><svg aria-hidden="true"><use href="#i-plug"/></svg>Verbindung</span><p><b>Kaufland</b> kurz nicht erreichbar. Nichts geändert, um 08:33 erfolgreich wiederholt</p><span class="st st--ok">Behoben</span></li>
+                <li data-state="ok"><time>08:21</time><span class="lt lt--green"><svg aria-hidden="true"><use href="#i-bag"/></svg>Bestellung</span><p><b>#1039</b> von Kaufland in Shopify angelegt</p><span class="st st--ok">Erledigt</span></li>
+                <li data-state="ok"><time>08:05</time><span class="lt lt--blue"><svg aria-hidden="true"><use href="#i-sync"/></svg>Bestand</span><p><b>Yogamatte Kork:</b> 10 → 9 Stück an Kaufland übertragen</p><span class="st st--ok">Erledigt</span></li>
+              </ol>
+            </div>
+
+            <!-- Einstellungen -->
+            <div class="win-view" role="tabpanel" id="v-einstellungen" aria-labelledby="t-einstellungen" tabindex="0">
+              <div class="win-head">
+                <div><h3>Einstellungen</h3><p>Du entscheidest, was Kanalo für dich erledigt</p></div>
+              </div>
+              <div class="win-cols win-cols--even">
+                <div class="panel">
+                  <h4>Automatischer Abgleich</h4>
+                  <ul class="settings">
+                    <li><div><b id="set-stock">Bestand abgleichen</b><span>Dein Bestand aus Shopify geht an deine Marktplätze.</span></div><button type="button" class="switch" role="switch" aria-checked="true" aria-labelledby="set-stock"></button></li>
+                    <li><div><b id="set-orders">Bestellungen übernehmen</b><span>Marktplatz-Bestellungen erscheinen in Shopify.</span></div><button type="button" class="switch" role="switch" aria-checked="true" aria-labelledby="set-orders"></button></li>
+                    <li><div><b id="set-ship">Versand melden</b><span>Sendungsnummern gehen an den Marktplatz.</span></div><button type="button" class="switch" role="switch" aria-checked="true" aria-labelledby="set-ship"></button></li>
+                  </ul>
+                </div>
+                <div class="panel">
+                  <h4>Sicherheit</h4>
+                  <ul class="settings">
+                    <li class="has-val"><div><b>Verknüpfung über</b><span>Gleicher Barcode in Shopify und auf dem Marktplatz.</span></div><span class="val">Barcode (EAN)</span></li>
+                    <li class="has-val"><div><b>Bei Störungen</b><span>Bestand bleibt unverändert, Kanalo versucht es erneut.</span></div><span class="val"><svg aria-hidden="true"><use href="#i-lock"/></svg>Immer aktiv</span></li>
+                    <li class="has-val"><div><b>Kaufland-Zugang</b><span>Zugangsdaten verschlüsselt gespeichert.</span></div><span class="val"><svg aria-hidden="true"><use href="#i-lock"/></svg>Geschützt</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -422,7 +575,7 @@
             <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Kein Newsletter, keine Werbung</li>
           </ul>
           <a class="btn btn--white" href="mailto:info@e7studio.de?subject=Kanalo%20%E2%80%93%20Benachrichtigung%20zum%20Start&amp;body=Hallo%20E7%20Studio%2C%0A%0Abitte%20gebt%20mir%20Bescheid%2C%20sobald%20Kanalo%20verf%C3%BCgbar%20ist.%0A%0AMein%20Shop%3A%20%0AIch%20verkaufe%20auf%3A%20"><svg aria-hidden="true"><use href="#i-bell"/></svg>Zum Start benachrichtigen</a>
-          <p class="start__note">Öffnet dein E-Mail-Programm mit einer fertigen Nachricht an info@e7studio.de.</p>
+          <p class="start__note">Öffnet dein E-Mail-Programm mit einer fertigen Nachricht. Klappt das nicht, schreib einfach an info@e7studio.de.</p>
         </div>
       </div>
     </div>
@@ -577,6 +730,104 @@
   if (menu) {
     menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.open = false; }); });
     document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  }
+
+  // Vorschau: zwischen den Bereichen der App wechseln
+  var win = document.querySelector('.window');
+  var list = win && win.querySelector('[role="tablist"]');
+  if (list) {
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    var crumb = document.getElementById('win-crumb');
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var narrow = window.matchMedia('(max-width: 1040px)');
+
+    // Auf schmalen Bildschirmen ist die Leiste waagerecht und scrollbar: Ränder weich ausblenden
+    function fades() {
+      var max = list.scrollWidth - list.clientWidth;
+      list.style.setProperty('--fade-l', list.scrollLeft > 2 ? '28px' : '0px');
+      list.style.setProperty('--fade-r', max > 2 && list.scrollLeft < max - 2 ? '28px' : '0px');
+    }
+    function orient() {
+      list.setAttribute('aria-orientation', narrow.matches ? 'horizontal' : 'vertical');
+      fades();
+    }
+
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        var view = document.getElementById(t.getAttribute('aria-controls'));
+        if (view) view.classList.toggle('is-active', on);
+      });
+      if (crumb) crumb.textContent = tab === tabs[0] ? '' : ' / ' + tab.textContent.trim();
+      if (focus) tab.focus({ preventScroll: true });
+      if (list.scrollWidth > list.clientWidth + 1) {
+        list.scrollTo({ left: tab.offsetLeft - (list.clientWidth - tab.offsetWidth) / 2, behavior: still.matches ? 'auto' : 'smooth' });
+      }
+    }
+
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t, false); });
+      t.addEventListener('keydown', function (e) {
+        var n = tabs.length, j = null;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') j = (i + 1) % n;
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') j = (i - 1 + n) % n;
+        else if (e.key === 'Home') j = 0;
+        else if (e.key === 'End') j = n - 1;
+        if (j === null) return;
+        e.preventDefault();
+        select(tabs[j], true);
+      });
+    });
+
+    // „Alle ansehen“ und „Zum Protokoll“ in der Übersicht
+    win.querySelectorAll('[data-goto]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = document.getElementById('t-' + b.getAttribute('data-goto'));
+        if (!t) return;
+        select(t, true);
+        var body = win.querySelector('.window__body');
+        if (body.getBoundingClientRect().top < 80) body.scrollIntoView({ block: 'start', behavior: still.matches ? 'auto' : 'smooth' });
+      });
+    });
+
+    // Filter in Produkte, Bestellungen und Protokoll
+    win.querySelectorAll('.seg').forEach(function (seg) {
+      var target = document.getElementById(seg.getAttribute('data-target'));
+      if (!target) return;
+      var rows = target.querySelectorAll('[data-state]');
+      var box = target.closest('.tbl-wrap') || target;
+      var btns = seg.querySelectorAll('button');
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var f = b.getAttribute('data-filter');
+          btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+          // Höhe halten, damit die Seite beim Filtern nicht springt
+          if (f !== 'all' && !box.style.minHeight) box.style.minHeight = box.getBoundingClientRect().height + 'px';
+          rows.forEach(function (r) { r.hidden = f !== 'all' && r.getAttribute('data-state') !== f; });
+          if (f === 'all') box.style.minHeight = '';
+        });
+      });
+    });
+
+    // Schalter in den Einstellungen
+    var live = document.getElementById('live-status');
+    win.querySelectorAll('.switch').forEach(function (s) {
+      s.addEventListener('click', function () {
+        s.setAttribute('aria-checked', s.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
+        if (!live) return;
+        var off = win.querySelectorAll('.switch[aria-checked="false"]').length > 0;
+        live.classList.toggle('is-paused', off);
+        live.lastElementChild.textContent = off ? 'Teilweise pausiert' : 'Synchronisierung aktiv';
+      });
+    });
+
+    list.addEventListener('scroll', fades, { passive: true });
+    window.addEventListener('resize', fades);
+    if (narrow.addEventListener) narrow.addEventListener('change', orient);
+    else if (narrow.addListener) narrow.addListener(orient);
+    orient();
   }
 })();
 </script>
