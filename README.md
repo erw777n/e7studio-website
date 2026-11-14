@@ -1,33 +1,33 @@
 # E7 Studio · Website (e7studio.de)
 
-Statische Website: `index.html`, `impressum.html`, `datenschutz.html`, `404.html`, `assets/` (Design, Favicon, Vorschaubild für Social Media, App-Symbol fürs Handy).
-Kein Build-Schritt nötig.
+Statische Website, kein Build-Schritt nötig. Gehostet über GitHub Pages.
 
-## Vor dem Hochladen
+## Aufbau
 
-1. **Impressum und Datenschutz prüfen:** Angaben sind eingetragen. Sobald du eine
-   Umsatzsteuer-ID hast, ergänze sie im Impressum.
-2. **Schriften lokal ablegen** (wichtig für den Datenschutz, keine Google-Verbindung):
-   Sag Claude Code:
-   > Lade die variablen Schriften „Plus Jakarta Sans“ und „JetBrains Mono“ (latin, woff2)
-   > von Fontsource herunter und speichere sie als
-   > `assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2` und
-   > `assets/fonts/jetbrains-mono-latin-wght-normal.woff2`.
+Im Hauptordner des Repos:
 
-   Ohne diese Dateien funktioniert die Seite trotzdem, sie nutzt dann die Systemschrift.
+- `index.html` – Startseite (Kanalo, Coming soon)
+- `impressum.html`, `datenschutz.html`
+- `404.html` – eigene Fehlerseite
+- `robots.txt`, `sitemap.xml` – für Suchmaschinen
+- `CNAME` – verbindet die Domain e7studio.de
 
-## Online stellen mit GitHub Pages
+Im Ordner `assets/`:
 
-1. Neues **öffentliches** Repo anlegen, z. B. `e7studio-website`
-   (GitHub Pages ist im kostenlosen Plan nur für öffentliche Repos verfügbar).
-2. Alle Dateien aus diesem Ordner hochladen (inkl. `CNAME`).
-3. Im Repo: **Settings → Pages → Build and deployment → Source: „Deploy from a branch“**,
-   Branch `main`, Ordner `/ (root)`, speichern.
-4. Unter **Custom domain** `e7studio.de` eintragen und speichern.
+- `style.css` – das komplette Design
+- `inter-400.woff`, `inter-600.woff`, `inter-700.woff`, `inter-display-700.woff`, `inter-display-800.woff` – Schrift Inter, lokal eingebunden (keine Verbindung zu Google)
+- `inter-OFL.txt` – Lizenz der Schrift (SIL Open Font License, frei nutzbar)
+- `favicon.svg`, `apple-touch-icon.png` – Symbol im Browser-Tab und auf dem Handy
+- `og-image.png` – Vorschaubild für WhatsApp, LinkedIn & Co.
 
-## Domain bei IONOS verbinden
+## Aktualisieren über GitHub
 
-In IONOS unter **Domains & SSL → e7studio.de → DNS**:
+1. Im Repo auf der Hauptseite: **Add file → Upload files**, die Dateien aus dem Hauptordner hineinziehen, **Commit changes**.
+2. Den Ordner **assets** im Repo anklicken, dort ebenfalls **Add file → Upload files**, alle Dateien aus `assets/` hineinziehen, **Commit changes**.
+
+Gleichnamige Dateien werden dabei automatisch ersetzt. Nach ein bis zwei Minuten ist die neue Version online (Seite mit Strg + F5 neu laden).
+
+## Domain bei IONOS
 
 | Typ   | Hostname | Wert                 |
 |-------|----------|----------------------|
@@ -35,9 +35,10 @@ In IONOS unter **Domains & SSL → e7studio.de → DNS**:
 | A     | @        | 185.199.109.153      |
 | A     | @        | 185.199.110.153      |
 | A     | @        | 185.199.111.153      |
+| AAAA  | @        | 2606:50c0:8000::153  |
+| AAAA  | @        | 2606:50c0:8001::153  |
+| AAAA  | @        | 2606:50c0:8002::153  |
+| AAAA  | @        | 2606:50c0:8003::153  |
 | CNAME | www      | erw777n.github.io    |
 
-- Einen vorhandenen A-Eintrag für `@` (z. B. die IONOS-Parkseite) ersetzen.
-- **MX-Einträge nicht anfassen**, sonst funktioniert info@e7studio.de nicht mehr.
-- Nach der DNS-Umstellung (kann bis zu 24 Std. dauern) in GitHub unter
-  Settings → Pages **„Enforce HTTPS“** aktivieren.
+MX-, SPF-, DKIM- und DMARC-Einträge (Mail) nicht verändern.

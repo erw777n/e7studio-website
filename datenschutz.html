@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Datenschutz · E7 Studio</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#050E1C">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<!--FONTS-->
-<link rel="stylesheet" href="assets/style.css">
+<meta name="theme-color" content="#040B17">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
+<div class="ambient" aria-hidden="true"></div>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="e7Seven" gradientUnits="userSpaceOnUse" x1="0" y1="70" x2="0" y2="330"><stop offset="0" stop-color="#2E98EE"/><stop offset="1" stop-color="#1076D4"/></linearGradient>
@@ -24,18 +25,18 @@
 <header class="site-header">
   <div class="wrap">
     <nav class="nav" aria-label="Hauptnavigation">
-      <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
+      <a class="logo" href="/" aria-label="E7 Studio, Startseite">
         <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
         <span>Studio</span>
       </a>
-      <div class="nav__links"><a class="btn btn--ghost btn--sm" href="index.html">Zur Startseite</a></div>
+      <div class="nav__links"><a class="btn btn--ghost btn--sm" href="/">Zur Startseite</a></div>
     </nav>
   </div>
 </header>
 
 <main class="legal" id="main">
   <div class="wrap">
-    <article>
+    <article class="glass ring">
       <h1>Datenschutzerklärung</h1>
       <p>Diese Erklärung gilt für die Website e7studio.de. Für unsere Shopify-Apps gibt es jeweils eine eigene Datenschutzerklärung.</p>
 
@@ -93,22 +94,31 @@
 <footer class="footer">
   <div class="wrap footer__top">
     <div class="footer__brand">
-      <a class="logo" href="index.html" aria-label="E7 Studio, Startseite">
+      <a class="logo" href="/" aria-label="E7 Studio, Startseite">
         <svg viewBox="0 0 531.4 260" aria-hidden="true"><use href="#e7Light"/></svg>
         <span>Studio</span>
       </a>
-      <p>Shopify-Apps für Händler im deutschsprachigen Raum. Entwickelt in Ettlingen.</p>
+      <p>Apps für Shopify-Händler im deutschsprachigen Raum.</p>
     </div>
     <nav class="footer__cols" aria-label="Fußzeile">
-      <div><h4>Kanalo</h4><a href="index.html#vorteile">Vorteile</a><a href="index.html#so-gehts">So geht’s</a><a href="index.html#faq">FAQ</a></div>
-      <div><h4>Studio</h4><a href="index.html#pilot">Pilotphase</a><a href="index.html#studio">Über E7 Studio</a><a href="index.html#kontakt">Kontakt</a></div>
-      <div><h4>Rechtliches</h4><a href="impressum.html">Impressum</a><a href="datenschutz.html" aria-current="page">Datenschutz</a></div>
+      <div><h4>Kanalo</h4><a href="/#vorschau">Vorschau</a><a href="/#funktionen">Funktionen</a><a href="/#sicherheit">Sicherheit</a><a href="/#roadmap">Roadmap</a></div>
+      <div><h4>Unternehmen</h4><a href="/#studio">Über E7 Studio</a><a href="/#faq">FAQ</a><a href="/#kontakt">Kontakt</a></div>
+      <div><h4>Rechtliches</h4><a href="/impressum.html">Impressum</a><a href="/datenschutz.html" aria-current="page">Datenschutz</a></div>
     </nav>
   </div>
   <div class="wrap footer__bottom">
     <span>© 2026 E7 Studio</span>
+    <p>Shopify, Kaufland, OTTO, eBay und Amazon sind Marken ihrer jeweiligen Inhaber.</p>
     <a href="mailto:info@e7studio.de">info@e7studio.de</a>
   </div>
 </footer>
+
+<script>
+(function () {
+  var h = document.querySelector('.site-header');
+  function f() { if (h) h.classList.toggle('is-scrolled', window.scrollY > 8); }
+  f(); window.addEventListener('scroll', f, { passive: true });
+})();
+</script>
 </body>
 </html>
