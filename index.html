@@ -6,6 +6,8 @@
 <title>E7 Studio · Kanalo für Shopify</title>
 <meta name="description" content="E7 Studio entwickelt Apps für Shopify-Händler. Kanalo verbindet deinen Shopify-Shop mit Kaufland, OTTO, eBay und Amazon. Bestand, Bestellungen und Versand gleichen sich automatisch ab. Bald verfügbar.">
 <meta name="theme-color" content="#040B17">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
 <link rel="canonical" href="https://e7studio.de/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="E7 Studio">
@@ -730,6 +732,21 @@
   if (menu) {
     menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.open = false; }); });
     document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  }
+
+  // Navigation zeigt, in welchem Abschnitt man gerade ist
+  var navLinks = document.querySelectorAll('.nav__links > a[href^="#"]:not(.btn)');
+  if ('IntersectionObserver' in window && navLinks.length) {
+    var byId = {};
+    navLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        navLinks.forEach(function (a) { a.removeAttribute('aria-current'); });
+        if (byId[en.target.id]) byId[en.target.id].setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main > section[id]').forEach(function (s) { spy.observe(s); });
   }
 
   // Vorschau: zwischen den Bereichen der App wechseln
