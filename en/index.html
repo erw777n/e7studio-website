@@ -88,6 +88,7 @@
         <span>Studio</span>
       </a>
       <div class="nav__links">
+        <a href="#preview">Preview</a>
         <a href="#features">Features</a>
         <a href="#security">Security</a>
         <a href="#roadmap">Roadmap</a>
@@ -576,15 +577,25 @@
         <div>
           <span class="eyebrow">Coming soon</span>
           <h2>Be the first to know when Kanalo launches.</h2>
-          <p>Drop us a line and we’ll let you know as soon as Kanalo is available on the Shopify App Store.</p>
+          <p>Enter your email address and we’ll let you know as soon as Kanalo is available on the Shopify App Store.</p>
         </div>
         <div class="start__side">
           <ul class="start__list">
-            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>A personal note at launch</li>
-            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>No newsletter, no ads</li>
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>One email when Kanalo launches</li>
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Unsubscribe any time</li>
           </ul>
-          <a class="btn btn--white" href="mailto:info@e7studio.de?subject=Kanalo%20%E2%80%93%20Launch%20notification&amp;body=Hi%20E7%20Studio%2C%0A%0Aplease%20let%20me%20know%20when%20Kanalo%20is%20available.%0A%0AMy%20store%3A%20%0AI%20sell%20on%3A%20"><svg aria-hidden="true"><use href="#i-bell"/></svg>Notify me at launch</a>
-          <p class="start__note">Opens your email app with a ready-made message. If that doesn’t work, just write to info@e7studio.de.</p>
+          <form class="signup" id="signup" method="POST" action="https://20b92ca9.sibforms.com/serve/MUIFAKgZa52xGH5ASfITtCvIgqc4P3RbiMZMpu2OlhDyLx4pu4kP8SWHOrI-ZG3Mtj87nRiO7RXKb8KbIkjQ-lj5Pku8-VUVPrYKjUEyJRoGC-59osFhj6B7RJp6VkSS54EQ4hK51KVkKd-RXJ4IP9T4LjRyjmKPV-O2_oKZVbuTrJqimFSzLE7Hpe6wcxWP746D6r8gfQYgEguDZg==">
+            <label class="sr-only" for="signup-email">Email address</label>
+            <div class="signup__row">
+              <input id="signup-email" name="EMAIL" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>
+              <button class="btn btn--white" type="submit" data-busy="Sending …"><svg aria-hidden="true"><use href="#i-bell"/></svg>Notify me</button>
+            </div>
+            <label class="signup__consent"><input type="checkbox" required><span>I’d like to be notified by email when Kanalo launches. You’ll get a confirmation email first. <a href="/datenschutz.html#warteliste" hreflang="de">Privacy policy (German)</a></span></label>
+            <div class="signup__hp" aria-hidden="true"><input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"></div>
+            <input type="hidden" name="locale" value="en">
+            <input type="hidden" name="html_type" value="simple">
+          </form>
+          <p class="start__note">Prefer email? Just write to <a href="mailto:info@e7studio.de">info@e7studio.de</a>.</p>
         </div>
       </div>
     </div>
@@ -874,6 +885,17 @@
     else if (narrow.addListener) narrow.addListener(orient);
     orient();
   }
+})();
+</script>
+<script>
+(function () {
+  var f = document.getElementById('signup');
+  if (!f) return;
+  var b = f.querySelector('button[type="submit"]'), t = b.lastChild, label = t.textContent;
+  f.addEventListener('submit', function () {
+    setTimeout(function () { b.disabled = true; b.setAttribute('aria-busy', 'true'); t.textContent = b.getAttribute('data-busy'); }, 0);
+  });
+  window.addEventListener('pageshow', function () { b.disabled = false; b.removeAttribute('aria-busy'); t.textContent = label; });
 })();
 </script>
 </body>
