@@ -136,87 +136,143 @@
       </div>
 
       <div class="hub">
+        <div class="hub__head"><b>So arbeitet Kanalo</b><span>Eine Bestellung kommt rein. Kanalo übernimmt den Rest.</span></div>
+        <div class="hub__stage">
         <div class="hub__plate glass ring" aria-hidden="true"></div>
-        <svg class="hub__svg hub__svg--h" viewBox="0 0 600 440" role="img" aria-label="Kaufland, OTTO, eBay und Amazon laufen über Kanalo in deinem Shopify-Shop zusammen">
+        <svg class="hub__svg hub__svg--h" viewBox="0 0 660 440" role="img" aria-label="Kaufland, OTTO, eBay und Amazon sind mit Kanalo verbunden. Bestellungen laufen in deinen Shopify-Shop, Bestände gehen automatisch zurück an alle Marktplätze.">
           <defs>
-            <radialGradient id="hubGlow"><stop offset="0" stop-color="#1483E3" stop-opacity="0.55"/><stop offset="1" stop-color="#1483E3" stop-opacity="0"/></radialGradient>
-            <clipPath id="hubClip"><rect x="256" y="176" width="88" height="88" rx="22"/></clipPath>
+            <radialGradient id="hubGlow"><stop offset="0" stop-color="#1483E3" stop-opacity="0.5"/><stop offset="1" stop-color="#1483E3" stop-opacity="0"/></radialGradient>
+            <clipPath id="hubClip"><rect x="284" y="174" width="92" height="92" rx="24"/></clipPath>
           </defs>
-          <circle cx="300" cy="220" r="140" fill="url(#hubGlow)"/>
-          <g fill="none" stroke="rgba(148,184,222,0.24)" stroke-width="2">
-            <path d="M168 64 C216 64 206 220 256 220"/>
-            <path d="M168 168 C216 168 206 220 256 220"/>
-            <path d="M168 272 C216 272 206 220 256 220"/>
-            <path d="M168 376 C216 376 206 220 256 220"/>
-            <path d="M344 220 H434"/>
+          <circle class="hub__glow" cx="330" cy="220" r="150" fill="url(#hubGlow)"/>
+          <text class="hub__group" x="22" y="58">MARKTPLÄTZE</text>
+          <line class="hub__rail" x1="30" y1="76" x2="30" y2="384"/>
+          <g class="hub__lines">
+            <path d="M204 104 C250 104 244 220 284 220"/>
+            <path d="M204 188 C250 188 244 220 284 220"/>
+            <path d="M204 272 C250 272 244 220 284 220"/>
+            <path d="M204 356 C250 356 244 220 284 220"/>
+            <path d="M376 220 H444"/>
           </g>
-          <g fill="none" stroke="#4FA9F3" stroke-width="3" stroke-linecap="round">
-            <path class="flow" d="M168 64 C216 64 206 220 256 220"/>
-            <path class="flow flow--slow" d="M168 168 C216 168 206 220 256 220"/>
-            <path class="flow" d="M168 272 C216 272 206 220 256 220"/>
-            <path class="flow flow--slow" d="M168 376 C216 376 206 220 256 220"/>
-            <path class="flow" d="M344 220 H434"/>
+          <g class="hub__pulses">
+            <path class="pulse pulse--in" pathLength="1" d="M204 104 C250 104 244 220 284 220"/>
+            <path class="pulse pulse--toshop" pathLength="1" d="M376 220 H444"/>
+            <path class="pulse pulse--fromshop" pathLength="1" d="M444 220 H376"/>
+            <path class="pulse pulse--out" pathLength="1" d="M284 220 C244 220 250 104 204 104"/>
+            <path class="pulse pulse--out" pathLength="1" d="M284 220 C244 220 250 188 204 188"/>
+            <path class="pulse pulse--out" pathLength="1" d="M284 220 C244 220 250 272 204 272"/>
+            <path class="pulse pulse--out" pathLength="1" d="M284 220 C244 220 250 356 204 356"/>
           </g>
-          <g font-size="15" font-weight="600" fill="#F3F7FC">
-            <rect x="6" y="40" width="162" height="48" rx="24" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/>
-            <circle cx="30" cy="64" r="5" fill="#34D399"/><text x="44" y="69">Kaufland</text>
-            <rect x="6" y="144" width="162" height="48" rx="24" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/>
-            <circle cx="30" cy="168" r="5" fill="#4FA9F3"/><text x="44" y="173">OTTO</text>
-            <rect x="6" y="248" width="162" height="48" rx="24" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/>
-            <circle cx="30" cy="272" r="5" fill="#4FA9F3"/><text x="44" y="277">eBay</text>
-            <rect x="6" y="352" width="162" height="48" rx="24" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/>
-            <circle cx="30" cy="376" r="5" fill="#4FA9F3"/><text x="44" y="381">Amazon</text>
+            <g class="mk mk--k">
+              <circle class="mk__dot" cx="30" cy="104" r="3.5"/>
+              <rect class="mk__box" x="44" y="81" width="160" height="46" rx="14"/>
+              <rect class="mk__ic" x="52" y="89" width="30" height="30" rx="9"/>
+              <svg x="58" y="95" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="92" y="109">Kaufland</text>
+              <g class="mk__stock"><rect x="164" y="93" width="32" height="22" rx="11"/><text class="v5" x="180" y="108">5</text><text class="v4" x="180" y="108">4</text></g>
+            </g>
+            <g class="mk mk--o">
+              <circle class="mk__dot" cx="30" cy="188" r="3.5"/>
+              <rect class="mk__box" x="44" y="165" width="160" height="46" rx="14"/>
+              <rect class="mk__ic" x="52" y="173" width="30" height="30" rx="9"/>
+              <svg x="58" y="179" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="92" y="193">OTTO</text>
+              <g class="mk__stock"><rect x="164" y="177" width="32" height="22" rx="11"/><text class="v5" x="180" y="192">5</text><text class="v4" x="180" y="192">4</text></g>
+            </g>
+            <g class="mk mk--e">
+              <circle class="mk__dot" cx="30" cy="272" r="3.5"/>
+              <rect class="mk__box" x="44" y="249" width="160" height="46" rx="14"/>
+              <rect class="mk__ic" x="52" y="257" width="30" height="30" rx="9"/>
+              <svg x="58" y="263" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="92" y="277">eBay</text>
+              <g class="mk__stock"><rect x="164" y="261" width="32" height="22" rx="11"/><text class="v5" x="180" y="276">5</text><text class="v4" x="180" y="276">4</text></g>
+            </g>
+            <g class="mk mk--a">
+              <circle class="mk__dot" cx="30" cy="356" r="3.5"/>
+              <rect class="mk__box" x="44" y="333" width="160" height="46" rx="14"/>
+              <rect class="mk__ic" x="52" y="341" width="30" height="30" rx="9"/>
+              <svg x="58" y="347" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="92" y="361">Amazon</text>
+              <g class="mk__stock"><rect x="164" y="345" width="32" height="22" rx="11"/><text class="v5" x="180" y="360">5</text><text class="v4" x="180" y="360">4</text></g>
+            </g>
+          <rect class="hub__frame" x="277" y="167" width="106" height="106" rx="29"/>
+          <g clip-path="url(#hubClip)"><svg x="284" y="174" width="92" height="92" viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></g>
+          <text class="hub__name" x="330" y="302" text-anchor="middle">Kanalo</text>
+          <text class="hub__sub" x="330" y="320" text-anchor="middle">Synchronisiert automatisch</text>
+          <g class="shop">
+            <rect class="shop__box" x="444" y="172" width="208" height="96" rx="20"/>
+            <rect class="shop__ic" x="456" y="200" width="40" height="40" rx="11"/>
+            <svg x="464" y="208" width="24" height="24" viewBox="0 0 24 24" class="shop__svg"><use href="#i-bag"/></svg>
+            <text class="shop__name" x="506" y="216">Dein Shopify-Shop</text>
+            <text class="shop__sub" x="506" y="237">Zentrale Verwaltung</text>
           </g>
-          <g fill="none" stroke="#8EA3BB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M136 60 h14 l-4 -4 M150 68 h-14 l4 4"/>
-            <path d="M136 164 h14 l-4 -4 M150 172 h-14 l4 4"/>
-            <path d="M136 268 h14 l-4 -4 M150 276 h-14 l4 4"/>
-            <path d="M136 372 h14 l-4 -4 M150 380 h-14 l4 4"/>
+          <g class="shop__pill">
+            <rect x="478" y="284" width="140" height="26" rx="13"/>
+            <text class="t-order" x="548" y="301" text-anchor="middle">Bestellung angelegt</text>
+            <text class="t-stock" x="548" y="301" text-anchor="middle">Bestand 5 → 4</text>
           </g>
-          <rect x="249" y="169" width="102" height="102" rx="28" fill="none" stroke="rgba(166,213,251,0.4)"/>
-          <g clip-path="url(#hubClip)"><svg x="256" y="176" width="88" height="88" viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></g>
-          <text x="300" y="298" text-anchor="middle" fill="#C3D2E3" font-size="13" font-weight="600">Kanalo</text>
-          <rect x="434" y="178" width="160" height="84" rx="20" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/>
-          <rect x="450" y="198" width="44" height="44" rx="12" fill="rgba(52,211,153,0.14)"/>
-          <svg x="459" y="207" width="26" height="26" viewBox="0 0 24 24" color="#34D399"><use href="#i-bag"/></svg>
-          <text x="506" y="216" fill="#F3F7FC" font-size="15" font-weight="600">Dein Shop</text>
-          <text x="506" y="237" fill="#8EA3BB" font-size="12.5">auf Shopify</text>
         </svg>
 
-        <svg class="hub__svg hub__svg--v" viewBox="0 0 360 440" role="img" aria-label="Kaufland, OTTO, eBay und Amazon laufen über Kanalo in deinem Shopify-Shop zusammen">
+        <svg class="hub__svg hub__svg--v" viewBox="0 0 360 500" role="img" aria-label="Kaufland, OTTO, eBay und Amazon sind mit Kanalo verbunden. Bestellungen laufen in deinen Shopify-Shop, Bestände gehen automatisch zurück an alle Marktplätze.">
           <defs>
-            <radialGradient id="hubGlowV"><stop offset="0" stop-color="#1483E3" stop-opacity="0.55"/><stop offset="1" stop-color="#1483E3" stop-opacity="0"/></radialGradient>
-            <clipPath id="hubClipV"><rect x="138" y="190" width="84" height="84" rx="21"/></clipPath>
+            <radialGradient id="hubGlowV"><stop offset="0" stop-color="#1483E3" stop-opacity="0.5"/><stop offset="1" stop-color="#1483E3" stop-opacity="0"/></radialGradient>
+            <clipPath id="hubClipV"><rect x="142" y="208" width="76" height="76" rx="20"/></clipPath>
           </defs>
-          <circle cx="180" cy="232" r="120" fill="url(#hubGlowV)"/>
-          <g fill="none" stroke="rgba(148,184,222,0.24)" stroke-width="2">
-            <path d="M48 72 C48 140 180 130 180 190"/>
-            <path d="M136 72 C136 140 180 130 180 190"/>
-            <path d="M224 72 C224 140 180 130 180 190"/>
-            <path d="M312 72 C312 140 180 130 180 190"/>
-            <path d="M180 274 V350"/>
+          <circle class="hub__glow" cx="180" cy="246" r="110" fill="url(#hubGlowV)"/>
+          <text class="hub__group" x="180" y="30" text-anchor="middle">MARKTPLÄTZE</text>
+          <rect class="hub__groupbox" x="8" y="38" width="344" height="114" rx="20"/>
+          <g class="hub__lines"><path d="M180 152 V202"/><path d="M180 290 V348"/></g>
+          <g class="hub__pulses">
+            <path class="pulse pulse--in" pathLength="1" d="M180 152 V202"/>
+            <path class="pulse pulse--toshop" pathLength="1" d="M180 290 V348"/>
+            <path class="pulse pulse--fromshop" pathLength="1" d="M180 348 V290"/>
+            <path class="pulse pulse--out" pathLength="1" d="M180 202 V152"/>
           </g>
-          <g fill="none" stroke="#4FA9F3" stroke-width="3" stroke-linecap="round">
-            <path class="flow" d="M48 72 C48 140 180 130 180 190"/>
-            <path class="flow flow--slow" d="M136 72 C136 140 180 130 180 190"/>
-            <path class="flow" d="M224 72 C224 140 180 130 180 190"/>
-            <path class="flow flow--slow" d="M312 72 C312 140 180 130 180 190"/>
-            <path class="flow" d="M180 274 V350"/>
+            <g class="mk mk--k">
+              <rect class="mk__box" x="16" y="46" width="160" height="44" rx="13"/>
+              <rect class="mk__ic" x="24" y="54" width="28" height="28" rx="8"/>
+              <svg x="29" y="59" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="62" y="73">Kaufland</text>
+              <g class="mk__stock"><rect x="136" y="57" width="32" height="22" rx="11"/><text class="v5" x="152" y="72">5</text><text class="v4" x="152" y="72">4</text></g>
+            </g>
+            <g class="mk mk--o">
+              <rect class="mk__box" x="184" y="46" width="160" height="44" rx="13"/>
+              <rect class="mk__ic" x="192" y="54" width="28" height="28" rx="8"/>
+              <svg x="197" y="59" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="230" y="73">OTTO</text>
+              <g class="mk__stock"><rect x="304" y="57" width="32" height="22" rx="11"/><text class="v5" x="320" y="72">5</text><text class="v4" x="320" y="72">4</text></g>
+            </g>
+            <g class="mk mk--e">
+              <rect class="mk__box" x="16" y="100" width="160" height="44" rx="13"/>
+              <rect class="mk__ic" x="24" y="108" width="28" height="28" rx="8"/>
+              <svg x="29" y="113" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="62" y="127">eBay</text>
+              <g class="mk__stock"><rect x="136" y="111" width="32" height="22" rx="11"/><text class="v5" x="152" y="126">5</text><text class="v4" x="152" y="126">4</text></g>
+            </g>
+            <g class="mk mk--a">
+              <rect class="mk__box" x="184" y="100" width="160" height="44" rx="13"/>
+              <rect class="mk__ic" x="192" y="108" width="28" height="28" rx="8"/>
+              <svg x="197" y="113" width="18" height="18" viewBox="0 0 24 24" class="mk__svg"><use href="#i-store"/></svg>
+              <text class="mk__name" x="230" y="127">Amazon</text>
+              <g class="mk__stock"><rect x="304" y="111" width="32" height="22" rx="11"/><text class="v5" x="320" y="126">5</text><text class="v4" x="320" y="126">4</text></g>
+            </g>
+          <rect class="hub__frame" x="136" y="202" width="88" height="88" rx="24"/>
+          <g clip-path="url(#hubClipV)"><svg x="142" y="208" width="76" height="76" viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></g>
+          <text class="hub__name" x="236" y="242">Kanalo</text>
+          <text class="hub__sub" x="236" y="260">Synchronisiert</text>
+          <text class="hub__sub" x="236" y="275">automatisch</text>
+          <g class="shop">
+            <rect class="shop__box" x="40" y="348" width="280" height="84" rx="20"/>
+            <rect class="shop__ic" x="58" y="368" width="44" height="44" rx="12"/>
+            <svg x="67" y="377" width="26" height="26" viewBox="0 0 24 24" class="shop__svg"><use href="#i-bag"/></svg>
+            <text class="shop__name" x="116" y="386">Dein Shopify-Shop</text>
+            <text class="shop__sub" x="116" y="407">Zentrale Verwaltung</text>
           </g>
-          <g font-size="13.5" font-weight="600" fill="#F3F7FC" text-anchor="middle">
-            <rect x="8" y="30" width="80" height="42" rx="21" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/><text x="48" y="56">Kaufland</text>
-            <rect x="96" y="30" width="80" height="42" rx="21" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/><text x="136" y="56">OTTO</text>
-            <rect x="184" y="30" width="80" height="42" rx="21" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/><text x="224" y="56">eBay</text>
-            <rect x="272" y="30" width="80" height="42" rx="21" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/><text x="312" y="56">Amazon</text>
+          <g class="shop__pill">
+            <rect x="110" y="446" width="140" height="26" rx="13"/>
+            <text class="t-order" x="180" y="463" text-anchor="middle">Bestellung angelegt</text>
+            <text class="t-stock" x="180" y="463" text-anchor="middle">Bestand 5 → 4</text>
           </g>
-          <rect x="132" y="184" width="96" height="96" rx="26" fill="none" stroke="rgba(166,213,251,0.4)"/>
-          <g clip-path="url(#hubClipV)"><svg x="138" y="190" width="84" height="84" viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></g>
-          <text x="242" y="237" fill="#C3D2E3" font-size="13" font-weight="600">Kanalo</text>
-          <rect x="90" y="350" width="180" height="80" rx="20" fill="rgba(18,44,80,0.72)" stroke="rgba(166,213,251,0.24)"/>
-          <rect x="106" y="368" width="44" height="44" rx="12" fill="rgba(52,211,153,0.14)"/>
-          <svg x="115" y="377" width="26" height="26" viewBox="0 0 24 24" color="#34D399"><use href="#i-bag"/></svg>
-          <text x="162" y="387" fill="#F3F7FC" font-size="15" font-weight="600">Dein Shop</text>
-          <text x="162" y="408" fill="#8EA3BB" font-size="12.5">auf Shopify</text>
         </svg>
 
         <div class="note note--order" aria-hidden="true">
@@ -227,7 +283,7 @@
           <span class="note__icon"><svg><use href="#i-sync"/></svg></span>
           <span><b>Bestand aktualisiert</b><small>auf allen Marktplätzen</small></span>
         </div>
-        <span class="hub__caption">Beispielansicht</span>
+        </div>
       </div>
     </div>
 
@@ -958,6 +1014,28 @@
     });
   }, { threshold: 0.45 });
   els.forEach(function (el) { el.classList.add('js-anim'); io.observe(el); });
+})();
+</script>
+<script>
+(function () {
+  var hub = document.querySelector('.hub');
+  if (!hub || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  hub.classList.add('is-live');
+  var steps = [['ph-order', 4200], ['ph-stock', 4600], ['', 2400]], i = 0, timer = null, visible = false;
+  function run() {
+    var st = steps[i];
+    hub.classList.remove('ph-order', 'ph-stock');
+    if (st[0]) { void hub.offsetWidth; hub.classList.add(st[0]); }
+    timer = setTimeout(function () { i = (i + 1) % steps.length; run(); }, st[1]);
+  }
+  function stop() { clearTimeout(timer); timer = null; }
+  new IntersectionObserver(function (es) {
+    visible = es[0].isIntersecting;
+    if (visible && !timer && !document.hidden) { timer = setTimeout(run, 600); }
+    if (!visible) stop();
+  }, { threshold: 0.3 }).observe(hub);
+  document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else if (visible && !timer) run(); });
 })();
 </script>
 </body>
