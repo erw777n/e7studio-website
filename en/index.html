@@ -75,6 +75,7 @@
     <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M6 3v15l3.8-3.5 2.6 5.8 2.3-1-2.6-5.7 5.3-.2L6 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
     <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3.5 12h17 M12 3.5c2.4 2.5 3.5 5.3 3.5 8.5s-1.1 6-3.5 8.5c-2.4-2.5-3.5-5.3-3.5-8.5s1.1-6 3.5-8.5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
 <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 11v5.5 M12 7.8v.2" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4.2L15.6 5.2a2 2 0 012.8 0l.4.4a2 2 0 010 2.8L8.2 19 4 20z M13.5 7.3l3.2 3.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
 
@@ -118,11 +119,14 @@
     <div class="wrap hero__grid">
       <div class="hero__copy">
         <span class="badge"><b>Coming soon</b>Kanalo for Shopify</span>
-        <h1 id="hero-title">Sell everywhere. <span class="grad">Control everything</span> from Shopify.</h1>
+        <h1 id="hero-title"><span class="line">Sell everywhere.</span> <span class="line"><span class="grad">Control everything</span> from Shopify.</span></h1>
         <p class="hero__lead">Kanalo connects your Shopify store to marketplaces like Kaufland, OTTO and eBay. Stock, orders and shipping stay in sync automatically. You keep working in Shopify and reach more customers.</p>
-        <div class="hero__ctas">
-          <a class="btn btn--primary" href="mailto:info@e7studio.de?subject=Kanalo%20%E2%80%93%20Launch%20notification&amp;body=Hi%20E7%20Studio%2C%0A%0Aplease%20let%20me%20know%20when%20Kanalo%20is%20available.%0A%0AMy%20store%3A%20%0AI%20sell%20on%3A%20">Notify me at launch <svg class="mv" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn--ghost" href="#preview">See the preview</a>
+        <div class="hero__cta">
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#start">Notify me at launch <svg class="mv" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#preview">See the preview</a>
+          </div>
+          <p class="hero__fine"><svg aria-hidden="true"><use href="#i-mail"/></svg>Just one email at launch. No marketing.</p>
         </div>
         <div class="hero__trust">
           <span><svg aria-hidden="true"><use href="#i-check"/></svg>Official APIs</span>
@@ -233,15 +237,53 @@
         <ul class="chips" aria-label="Supported platforms">
           <li class="chip chip--src"><i></i>Shopify <small>Your store</small></li>
           <li class="chip chip--first"><i></i>Kaufland <small>at launch</small></li>
-          <li class="chip"><i></i>OTTO <small>planned</small></li>
-          <li class="chip"><i></i>eBay <small>planned</small></li>
-          <li class="chip"><i></i>Amazon <small>planned</small></li>
+          <li class="chip"><i></i>OTTO <small>up next</small></li>
+          <li class="chip"><i></i>eBay <small>later</small></li>
+          <li class="chip"><i></i>Amazon <small>later</small></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="section" id="preview" aria-labelledby="preview-title">
+  <section class="section compare" id="why" aria-labelledby="compare-title">
+    <div class="wrap">
+      <div class="section__head section__head--center reveal">
+        <span class="eyebrow">Why Kanalo</span>
+        <h2 id="compare-title"><span class="line">Manage it once in Shopify.</span> <span class="line"><span class="grad">Sell everywhere.</span></span></h2>
+        <p class="section__lead">Kanalo connects Shopify to your marketplaces and syncs stock, orders and shipping.</p>
+      </div>
+      <div class="cmp reveal">
+        <figure class="cmp__card cmp__card--without">
+          <figcaption class="cmp__cap"><span class="cmp__tag">Without Kanalo</span><b>Every marketplace on its own</b></figcaption>
+          <div class="cmp__viz cmp__viz--without" aria-hidden="true">
+            <span class="node node--shop"><i><svg><use href="#i-bag"/></svg></i>Shopify</span><span class="wire wire--manual"><i><svg><use href="#i-pen"/></svg></i></span><span class="node"><i><svg><use href="#i-store"/></svg></i>Kaufland</span>
+            <span class="node node--shop"><i><svg><use href="#i-bag"/></svg></i>Shopify</span><span class="wire wire--manual"><i><svg><use href="#i-pen"/></svg></i></span><span class="node"><i><svg><use href="#i-store"/></svg></i>OTTO</span>
+            <span class="node node--shop"><i><svg><use href="#i-bag"/></svg></i>Shopify</span><span class="wire wire--manual"><i><svg><use href="#i-pen"/></svg></i></span><span class="node"><i><svg><use href="#i-store"/></svg></i>eBay</span>
+            <span class="node node--shop"><i><svg><use href="#i-bag"/></svg></i>Shopify</span><span class="wire wire--manual"><i><svg><use href="#i-pen"/></svg></i></span><span class="node"><i><svg><use href="#i-store"/></svg></i>Amazon</span>
+          </div>
+          <p class="cmp__note">Updating stock, orders and shipping by hand for every marketplace. More work, more room for mistakes.</p>
+        </figure>
+        <figure class="cmp__card cmp__card--with glass ring" data-io>
+          <figcaption class="cmp__cap"><span class="cmp__tag cmp__tag--on">With Kanalo</span><b>One system, automatic sync</b></figcaption>
+          <div class="cmp__viz cmp__viz--with" aria-hidden="true">
+            <span class="node node--shop"><i><svg><use href="#i-bag"/></svg></i>Shopify</span>
+            <span class="wire wire--auto"></span>
+            <span class="cmp__hub"><span class="cmp__tile"><svg viewBox="0 0 1200 1200"><use href="#kanalo"/></svg></span><small>Kanalo</small></span>
+            <svg class="cmp__fan" viewBox="0 0 56 174" preserveAspectRatio="none"><path pathLength="1" style="--d:.75s" d="M0 87 C30 87 26 18 56 18"/><path pathLength="1" style="--d:.85s" d="M0 87 C30 87 26 64 56 64"/><path pathLength="1" style="--d:.95s" d="M0 87 C30 87 26 110 56 110"/><path pathLength="1" style="--d:1.05s" d="M0 87 C30 87 26 156 56 156"/></svg>
+            <span class="cmp__markets">
+              <span class="node" style="--d2:1.35s"><i><svg><use href="#i-store"/></svg></i>Kaufland<svg class="node__ok"><use href="#i-check"/></svg></span>
+              <span class="node" style="--d2:1.45s"><i><svg><use href="#i-store"/></svg></i>OTTO<svg class="node__ok"><use href="#i-check"/></svg></span>
+              <span class="node" style="--d2:1.55s"><i><svg><use href="#i-store"/></svg></i>eBay<svg class="node__ok"><use href="#i-check"/></svg></span>
+              <span class="node" style="--d2:1.65s"><i><svg><use href="#i-store"/></svg></i>Amazon<svg class="node__ok"><use href="#i-check"/></svg></span>
+            </span>
+          </div>
+          <p class="cmp__note">You manage everything in Shopify. Kanalo keeps every marketplace up to date automatically.</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="preview" aria-labelledby="preview-title">
     <div class="wrap">
       <div class="section__head section__head--center reveal">
         <span class="eyebrow">Preview</span>
@@ -455,8 +497,8 @@
     <div class="wrap">
       <div class="section__head reveal">
         <span class="eyebrow">Features</span>
-        <h2 id="benefits-title">More sales. <span class="grad">Less work.</span></h2>
-        <p>Marketplaces bring you customers who don’t know your store yet. Kanalo does the work behind the scenes, so you never maintain anything twice.</p>
+        <h2 id="benefits-title">You manage Shopify. <span class="grad">Kanalo does the rest.</span></h2>
+        <p>Stock, orders, shipping and product matching run automatically. So you reach new customers on every marketplace without maintaining anything twice.</p>
       </div>
 
       <div class="bento reveal">
@@ -479,13 +521,15 @@
             <h3>Never oversell again</h3>
             <p>Sell a product anywhere and the stock is updated everywhere automatically.</p>
           </div>
-          <div class="tile__visual stock">
-            <div class="stock__item"><div><b>Linen shirt, size M</b><small>Stock</small></div><span class="stock__num">3</span></div>
-            <div class="stock__chans">
-              <span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>Shopify</span>
-              <span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>Kaufland</span>
-              <span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>OTTO</span>
-            </div>
+          <div class="tile__visual sync" data-io role="img" aria-label="Example: a sale on Kaufland automatically lowers the stock in Shopify, on Kaufland, OTTO and eBay from 5 to 4 units.">
+            <div class="sync__head" aria-hidden="true"><b>Linen shirt, size M</b><span class="ex">Example</span></div>
+            <div class="sync__main" aria-hidden="true"><span class="sync__src"><i><svg><use href="#i-bag"/></svg></i>Shopify<small>Stock</small></span><span class="roll" style="--d:1.5s"><span class="roll__in"><b>5</b><b>4</b></span></span></div>
+            <div class="sync__event" aria-hidden="true"><svg><use href="#i-receipt"/></svg>Sale on Kaufland · 1 unit</div>
+            <ul class="sync__chans" aria-hidden="true">
+              <li style="--d:2.3s"><span>Kaufland</span><span class="roll"><span class="roll__in"><b>5</b><b>4</b></span></span><svg class="sync__ok"><use href="#i-check"/></svg></li>
+              <li style="--d:2.55s"><span>OTTO</span><span class="roll"><span class="roll__in"><b>5</b><b>4</b></span></span><svg class="sync__ok"><use href="#i-check"/></svg></li>
+              <li style="--d:2.8s"><span>eBay</span><span class="roll"><span class="roll__in"><b>5</b><b>4</b></span></span><svg class="sync__ok"><use href="#i-check"/></svg></li>
+            </ul>
           </div>
         </article>
 
@@ -514,38 +558,24 @@
 
         <article class="tile glass ring tile--third">
           <div class="tile__text">
-            <h3>Set up in minutes</h3>
-            <p>No spreadsheets, no imports. Your products are matched automatically by barcode.</p>
+            <h3>Products matched automatically</h3>
+            <p>No spreadsheets, no imports. Kanalo recognises your products by barcode and links them to the right listing.</p>
           </div>
-          <ul class="tile__visual setup">
-            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>App installed</li>
-            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Marketplace connected</li>
-            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Products matched</li>
-          </ul>
+          <div class="tile__visual matches" aria-label="Example: product matching by barcode">
+            <div class="match"><span><b>Linen shirt</b><small>Size M</small></span><span class="st st--ok">Linked</span></div>
+            <div class="match"><span><b>Travel mug</b><small>500 ml</small></span><span class="st st--ok">Linked</span></div>
+            <div class="match"><span><b>Candle</b><small>Lavender</small></span><span class="st st--warn">Barcode missing</span></div>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section section--tight" id="how-it-works" aria-labelledby="steps-title">
-    <div class="wrap">
-      <div class="section__head section__head--center reveal">
-        <span class="eyebrow">How it works</span>
-        <h2 id="steps-title">Ready in three steps.</h2>
-      </div>
-      <ol class="steps reveal">
-        <li class="step"><h3>Install the app</h3><p>Add Kanalo from the Shopify App Store. It opens right inside your Shopify admin.</p></li>
-        <li class="step"><h3>Connect a marketplace</h3><p>Enter the credentials of your seller account. They are stored encrypted.</p></li>
-        <li class="step"><h3>Start selling</h3><p>Kanalo matches your products and keeps stock, orders and shipping in sync from then on.</p></li>
-      </ol>
-    </div>
-  </section>
-
   <section class="section section--tight" id="security" aria-labelledby="trust-title">
     <div class="wrap">
-      <div class="section__head reveal">
+      <div class="section__head section__head--minor reveal">
         <span class="eyebrow">Security &amp; trust</span>
-        <h2 id="trust-title">Built to be <span class="grad">relied on.</span></h2>
+        <h2 id="trust-title">Built to be relied on.</h2>
         <p>Kanalo works with your stock and your orders. That’s why reliability comes first for us.</p>
       </div>
       <div class="trust reveal">
@@ -559,54 +589,41 @@
     </div>
   </section>
 
+  <section class="section section--tight" id="how-it-works" aria-labelledby="steps-title">
+    <div class="wrap">
+      <div class="section__head section__head--center section__head--minor reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 id="steps-title">Ready in three steps.</h2>
+      </div>
+      <ol class="steps reveal">
+        <li class="step"><h3>Install the app</h3><p>Add Kanalo from the Shopify App Store. It opens right inside your Shopify admin.</p></li>
+        <li class="step"><h3>Connect a marketplace</h3><p>Enter the credentials of your seller account. They are stored encrypted.</p></li>
+        <li class="step"><h3>Start selling</h3><p>Kanalo matches your products and keeps stock, orders and shipping in sync from then on.</p></li>
+      </ol>
+    </div>
+  </section>
+
   <section class="section section--tight" id="roadmap" aria-labelledby="roadmap-title">
     <div class="wrap">
-      <div class="section__head reveal">
+      <div class="section__head section__head--minor reveal">
         <span class="eyebrow">Roadmap</span>
-        <h2 id="roadmap-title">Kanalo is <span class="grad">launching soon.</span></h2>
+        <h2 id="roadmap-title">Kanalo is launching soon.</h2>
         <p>We start with Kaufland and add more marketplaces step by step.</p>
       </div>
       <ol class="roadmap reveal">
-        <li class="rm rm--active"><span class="rm__dot"><svg aria-hidden="true"><use href="#i-plug"/></svg></span><span class="st st--soon">In development</span><h3>Kaufland integration</h3><p>Stock, orders and shipping between Shopify and Kaufland.</p></li>
-        <li class="rm rm--next"><span class="rm__dot"><svg aria-hidden="true"><use href="#i-rocket"/></svg></span><span class="st st--soon">Coming soon</span><h3>Launch on the Shopify App Store</h3><p>Kanalo becomes available to all Shopify merchants.</p></li>
-        <li class="rm"><span class="rm__dot"><svg aria-hidden="true"><use href="#i-store"/></svg></span><span class="st">Planned</span><h3>OTTO</h3><p>Planned as the next marketplace.</p></li>
-        <li class="rm"><span class="rm__dot"><svg aria-hidden="true"><use href="#i-flag"/></svg></span><span class="st">Planned</span><h3>eBay &amp; Amazon</h3><p>More marketplaces based on what our merchants ask for.</p></li>
+        <li class="rm rm--active"><span class="rm__dot"><svg aria-hidden="true"><use href="#i-rocket"/></svg></span><span class="st st--soon">At launch</span><h3>Launch on the Shopify App Store</h3><p>With the Kaufland integration: stock, orders and shipping between Shopify and Kaufland.</p></li>
+        <li class="rm rm--next"><span class="rm__dot"><svg aria-hidden="true"><use href="#i-store"/></svg></span><span class="st">Up next</span><h3>OTTO</h3><p>The next marketplace after launch.</p></li>
+        <li class="rm"><span class="rm__dot"><svg aria-hidden="true"><use href="#i-flag"/></svg></span><span class="st">After that</span><h3>eBay &amp; Amazon</h3><p>More marketplaces based on what our merchants ask for.</p></li>
       </ol>
-
-      <div class="start reveal" id="start">
-        <div>
-          <span class="eyebrow">Coming soon</span>
-          <h2>Be the first to know when Kanalo launches.</h2>
-          <p>Enter your email address and we’ll let you know as soon as Kanalo is available on the Shopify App Store.</p>
-        </div>
-        <div class="start__side">
-          <ul class="start__list">
-            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>One email when Kanalo launches</li>
-            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Unsubscribe any time</li>
-          </ul>
-          <form class="signup" id="signup" method="POST" action="https://20b92ca9.sibforms.com/serve/MUIFAKgZa52xGH5ASfITtCvIgqc4P3RbiMZMpu2OlhDyLx4pu4kP8SWHOrI-ZG3Mtj87nRiO7RXKb8KbIkjQ-lj5Pku8-VUVPrYKjUEyJRoGC-59osFhj6B7RJp6VkSS54EQ4hK51KVkKd-RXJ4IP9T4LjRyjmKPV-O2_oKZVbuTrJqimFSzLE7Hpe6wcxWP746D6r8gfQYgEguDZg==">
-            <label class="sr-only" for="signup-email">Email address</label>
-            <div class="signup__row">
-              <input id="signup-email" name="EMAIL" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>
-              <button class="btn btn--white" type="submit" data-busy="Sending …"><svg aria-hidden="true"><use href="#i-bell"/></svg>Notify me</button>
-            </div>
-            <label class="signup__consent"><input type="checkbox" required><span>I’d like to be notified by email when Kanalo launches. You’ll get a confirmation email first. <a href="/datenschutz.html#warteliste" hreflang="de">Privacy policy (German)</a></span></label>
-            <div class="signup__hp" aria-hidden="true"><input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"></div>
-            <input type="hidden" name="locale" value="en">
-            <input type="hidden" name="html_type" value="simple">
-          </form>
-          <p class="start__note">Prefer email? Just write to <a href="mailto:info@e7studio.de">info@e7studio.de</a>.</p>
-        </div>
-      </div>
     </div>
   </section>
 
   <section class="section section--tight" id="studio" aria-labelledby="studio-title">
     <div class="wrap studio">
       <div class="reveal">
-        <div class="section__head">
+        <div class="section__head section__head--minor">
           <span class="eyebrow">E7 Studio</span>
-          <h2 id="studio-title">Kanalo is <span class="grad">just the beginning.</span></h2>
+          <h2 id="studio-title">Kanalo is just the beginning.</h2>
           <p>E7 Studio builds apps for Shopify merchants. Few apps, but well thought out, reliable and with personal support.</p>
         </div>
         <ul class="facts">
@@ -638,7 +655,7 @@
 
   <section class="section section--tight" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
-      <div class="section__head section__head--center reveal">
+      <div class="section__head section__head--center section__head--minor reveal">
         <span class="eyebrow">FAQ</span>
         <h2 id="faq-title">Frequently asked questions</h2>
       </div>
@@ -667,6 +684,36 @@
           <summary>What happens to my data?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
           <p>We only process what Kanalo needs for the sync. Credentials are stored encrypted. If you remove the app, your store data is deleted.</p>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" aria-labelledby="start-title">
+    <div class="wrap">
+      <div class="start reveal" id="start">
+        <div>
+          <span class="eyebrow">Coming soon</span>
+          <h2 id="start-title">Be the first to know when Kanalo launches.</h2>
+          <p>Enter your email address and we’ll let you know as soon as Kanalo is available on the Shopify App Store.</p>
+        </div>
+        <div class="start__side">
+          <ul class="start__list">
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>One email when Kanalo launches</li>
+            <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Unsubscribe any time</li>
+          </ul>
+          <form class="signup" id="signup" method="POST" action="https://20b92ca9.sibforms.com/serve/MUIFAKgZa52xGH5ASfITtCvIgqc4P3RbiMZMpu2OlhDyLx4pu4kP8SWHOrI-ZG3Mtj87nRiO7RXKb8KbIkjQ-lj5Pku8-VUVPrYKjUEyJRoGC-59osFhj6B7RJp6VkSS54EQ4hK51KVkKd-RXJ4IP9T4LjRyjmKPV-O2_oKZVbuTrJqimFSzLE7Hpe6wcxWP746D6r8gfQYgEguDZg==">
+            <label class="sr-only" for="signup-email">Email address</label>
+            <div class="signup__row">
+              <input id="signup-email" name="EMAIL" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>
+              <button class="btn btn--white" type="submit" data-busy="Sending …"><svg aria-hidden="true"><use href="#i-bell"/></svg>Notify me</button>
+            </div>
+            <label class="signup__consent"><input type="checkbox" required><span>I’d like to be notified by email when Kanalo launches. You’ll get a confirmation email first. <a href="/datenschutz.html#warteliste" hreflang="de">Privacy policy (German)</a></span></label>
+            <div class="signup__hp" aria-hidden="true"><input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"></div>
+            <input type="hidden" name="locale" value="en">
+            <input type="hidden" name="html_type" value="simple">
+          </form>
+          <p class="start__note">Prefer email? Just write to <a href="mailto:info@e7studio.de">info@e7studio.de</a>.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -785,7 +832,7 @@
         if (byId[en.target.id]) byId[en.target.id].setAttribute('aria-current', 'true');
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('main > section[id]').forEach(function (s) { spy.observe(s); });
+    document.querySelectorAll('main > section').forEach(function (s) { spy.observe(s); });
   }
 
   // Vorschau: zwischen den Bereichen der App wechseln
@@ -896,6 +943,21 @@
     setTimeout(function () { b.disabled = true; b.setAttribute('aria-busy', 'true'); t.textContent = b.getAttribute('data-busy'); }, 0);
   });
   window.addEventListener('pageshow', function () { b.disabled = false; b.removeAttribute('aria-busy'); t.textContent = label; });
+})();
+</script>
+<script>
+(function () {
+  var els = document.querySelectorAll('[data-io]');
+  if (!els.length || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      io.unobserve(en.target);
+      requestAnimationFrame(function () { requestAnimationFrame(function () { en.target.classList.add('is-in'); }); });
+    });
+  }, { threshold: 0.45 });
+  els.forEach(function (el) { el.classList.add('js-anim'); io.observe(el); });
 })();
 </script>
 </body>
